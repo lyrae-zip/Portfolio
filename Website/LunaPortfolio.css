@@ -1,0 +1,28 @@
+.header, .bannertext, .footertext {
+    /* border: 1px rgb(95, 95, 95) solid; */
+    padding: 60px;
+} 
+
+body{
+    background-color: antiquewhite;
+    font-family: "Space Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.bannertext{
+    font-size: 400%;
+}
+
+.header > .link {
+    float: right;
+    padding: 0px 10px
+}
+
+.footertext{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
