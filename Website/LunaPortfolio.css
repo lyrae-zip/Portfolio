@@ -10,8 +10,30 @@ body{
     font-style: normal;
 }
 
+
+/* Styles for name and center card*/
 .bannertext{
     font-size: 400%;
+
+    gap: 1rem;
+}
+.bannertext > *{
+    display: flex;
+    align-items: center;
+}
+.bannertext > img{
+
+    scale: 50%;
+    margin-top: -200px;
+    display: flex;
+    height: 120;
+    width: auto;
+    align-items: right;
+    float: right;
+}
+.bannertext > p{
+    width: 400px;
+    margin: 0;
 }
 
 .header > .link {
@@ -26,3 +48,6 @@ body{
     width: 100%;
 }
 
+*{
+    border: 1px black solid;
+}
