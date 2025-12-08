@@ -14,12 +14,18 @@ body{
 /* Styles for name and center card*/
 .bannertext{
     font-size: 400%;
-
+    border: 1px solid black;
     gap: 1rem;
-}
-.bannertext > *{
     display: flex;
-    align-items: center;
+    justify-content: space-between;
+}
+/* .bannertext > *{
+    display: flex;
+    align-items: center;   
+} */
+.bannertext > div {
+    border: 1px solid black;
+
 }
 /* .bannertext > img{
 
@@ -32,7 +38,7 @@ body{
     float: right;
 } */
 .bannertext > p{
-    width: 400px;
+    width: 100000px;
     margin: 0;
     height:50vh
 }
@@ -49,10 +55,11 @@ body{
     width: 100%;
 }
 .projects{
-    height: 400px;
+    /* height: 400px; */
     display: flex;
     justify-content: space-between;
-    padding: 10%
+    /* padding: 10% */
+    padding: 0% 10%
 }
 .projects > .project{
     width: 500px;
@@ -60,7 +67,15 @@ body{
     margin: 10px;
     border: 10px solid black;
     background-color:darkkhaki
+
 }
-*{
+h1{
+    text-align: center;
+}
+
+.resume{
+    text-align: center;
+}
+/* *{
     border: 1px black solid;
-}
+} */
