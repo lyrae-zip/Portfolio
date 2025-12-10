@@ -25,22 +25,68 @@ body{
 } */
 .bannertext > div {
     border: 1px solid black;
-
 }
-/* .bannertext > img{
-
-    scale: 50%;
-    margin-top: -200px;
+.bannertext > .discription{
+    font-size: 50%;
+    align-items: center;
     display: flex;
-    height: 120;
-    width: auto;
-    align-items: right;
-    float: right;
-} */
-.bannertext > p{
-    width: 100000px;
+    margin-right: 200px;
+    width:400px
+}
+/* New layout: name-wrapper holds two same-size squares (cube image and text square) */
+.name-wrapper{
+    position: relative;
+    width: 360px;
+    height: 360px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    background: transparent;
+}
+
+.name-wrapper .cube{
+    /* cube removed from name-wrapper; keep a safe default in case it's reused */
+    display: none;
+}
+
+/* Place cube behind the Lorem Ipsum description */
+.discription{
+    position: relative;
+}
+
+.discription .cube{
+    position: absolute;
+    width: 320px;
+    height: 320px;
+    object-fit: contain;
+    z-index: 1;
+    /* place the cube farther away from the text (more offset up-left) */
+    top: -80px;
+    left: -80px;
+}
+
+.discription p{
+    position: relative;
+    z-index: 2;
     margin: 0;
-    height:50vh
+}
+.name-square{
+    position: absolute;
+    width: 320px;
+    height: 320px;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: antiquewhite; /* same as body so the text block covers the cube where they overlap */
+}
+
+.name-square p{
+    margin: 0;
+    font-size: 2.2rem;
+    line-height: 1;
 }
 
 .header > .link {
