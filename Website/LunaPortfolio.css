@@ -1,6 +1,6 @@
 .header, .bannertext, .footertext {
     border: 1px rgb(95, 95, 95) solid;
-    padding: 60px;
+    padding: 30px;
 } 
 .header{
     position: fixed;
@@ -21,7 +21,7 @@ body{
     display:flex;
     justify-content: space-between;
     padding-top: 270px;
-        border:1px solid black;
+        /* border:1px solid black; */
 
 }
 .discription{
@@ -40,7 +40,7 @@ body{
 .discription{
     position: relative;
 
-    border:1px solid black;
+    /* border:1px solid black; */
 }
 
 .discription > .cube{
@@ -62,7 +62,7 @@ body{
 }
 .name-square{
     /* position: absolute; */
-    width: 320px;
+    width: 400px;
     height: 320px;
     z-index: 2;
     display: flex;
@@ -70,11 +70,12 @@ body{
     justify-content: center;
     text-align: center;
     background-color: antiquewhite; /* same as body so the text block covers the cube where they overlap */
+    margin-left: 100px;
 }
 
 .name-square p{
     margin: 0;
-    font-size: 2.2rem;
+    font-size: 4rem;
     line-height: 1;
 }
 
@@ -144,25 +145,4 @@ a{
 }
 
 
-/* Make it sticky and ready to transform */
-#coolscrolly {
-    position: absolute; /* never change this */
-    top: 200px;         /* initial start position relative to container */
-    left: 50px;
-    width: 320px;
-    height: 320px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    background-color: antiquewhite;
-    transition: transform 0.35s ease;
-    transform-origin: left center;
-
-}
-
-/* Shrink and move into header */
-body.header-scrolled #coolscrolly {
-    transform: scale(0.45) translateX(20px) translateY(-40px);
-}
 

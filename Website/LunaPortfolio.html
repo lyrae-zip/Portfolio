@@ -13,18 +13,18 @@
 
 </head>
 <body>
-    <div class="header" id="pageHeader">
+    <div class="header">
+    
+        <a class="logo-text" href="#top">Luna Miles Portfolio</a>
+    
         <a class="link" href="https://www.credly.com/users/luna_miles/">Certifications</a>
         <a class="link" href="#projects">My Projects</a>
         <a class="link" href="#resume">Resume</a>
     </div>
-    <div class="name-square" id="coolscrolly">
-        <p>I am<strong><br>Luna Miles</strong></p>
-    </div>
-    <div class="spacer">
-        <div>
-            <p  style="display:none">HIDDEN TEXT TO SPACE THE CUBE</p>
-        </div>
+    <div class="spacer"  id="top">
+            <div class="name-square">
+                <p>I am<strong><br>Luna Miles</strong></p>
+            </div>
         <div class="discription">
             <img class="cube" src="../cube-outline-svgrepo-com.svg" alt="cube">
             <p>The cube here is a sample image, a this will be replaced with a professional selfie later :)</p>
@@ -63,36 +63,7 @@
     <div class="footertext">
         <p>Totally awesome footer woaahhhh</p>
     </div>
-    <script>
-const cool = document.getElementById("coolscrolly");
-const start = 200; // top scroll offset where transform starts
-const end = 400;   // end scroll offset for final transform
-const initialTop = 200;
 
-window.addEventListener("scroll", () => {
-    const scroll = window.scrollY;
-    
-    if(scroll < start){
-        // move normally
-        cool.style.top = `${initialTop - scroll}px`;
-        cool.style.transform = "scale(1) translateX(0px) translateY(0px)";
-    } else if(scroll >= start && scroll <= end){
-        // smooth interpolation
-        const progress = (scroll - start) / (end - start);
-        const scale = 1 - 0.55 * progress;
-        const translateX = 20 * progress;
-        const translateY = -40 * progress;
-        cool.style.top = `0px`; // now sticking at top
-        cool.style.transform = `scale(${scale}) translateX(${translateX}px) translateY(${translateY}px)`;
-    } else {
-        cool.style.top = `0px`;
-        cool.style.transform = "scale(0.45) translateX(20px) translateY(-40px)";
-    }
-});
-
-
-
-</script>
 
     </script>
 </body>
