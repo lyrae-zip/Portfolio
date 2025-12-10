@@ -1,7 +1,13 @@
 .header, .bannertext, .footertext {
-    /* border: 1px rgb(95, 95, 95) solid; */
+    border: 1px rgb(95, 95, 95) solid;
     padding: 60px;
 } 
+.header{
+    position: fixed;
+    width: 100%;
+    background-color: antiquewhite;
+    z-index: 50;
+}
 
 body{
     background-color: antiquewhite;
@@ -11,48 +17,30 @@ body{
 }
 
 
-/* Styles for name and center card*/
-.bannertext{
-    font-size: 400%;
-    /* border: 1px solid black; */
-    gap: 1rem;
-    display: flex;
+.spacer{
+    display:flex;
     justify-content: space-between;
+    padding-top: 270px;
+        border:1px solid black;
+
 }
-/* .bannertext > *{
-    display: flex;
-    align-items: center;   
-} */
-.bannertext > div {
-    border: 1px solid black;
-}
-.bannertext > .discription{
+.discription{
     font-size: 50%;
     align-items: center;
     display: flex;
     margin-right: 200px;
-    width:500px
+    width:500px;
+    
 }
 /* New layout: name-wrapper holds two same-size squares (cube image and text square) */
-.name-wrapper{
-    position: relative;
-    width: 360px;
-    height: 360px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid black;
-    background: transparent;
-}
 
-.name-wrapper > .cube{
-    /* cube removed from name-wrapper; keep a safe default in case it's reused */
-    display: none;
-}
+
 
 /* Place cube behind the Lorem Ipsum description */
 .discription{
     position: relative;
+
+    border:1px solid black;
 }
 
 .discription > .cube{
@@ -70,9 +58,10 @@ body{
     position: relative;
     z-index: 2;
     margin: 0;
+    font-size: 5em;
 }
 .name-square{
-    position: absolute;
+    /* position: absolute; */
     width: 320px;
     height: 320px;
     z-index: 2;
@@ -95,10 +84,18 @@ body{
 }
 
 .footertext{
-    position: fixed;
+    /* position: fixed; */
     bottom: 0;
     left: 0;
     width: 100%;
+
+    background-color: antiquewhite;
+    padding: 0px;
+    margin:0px
+}
+.footertext > p {
+    padding: 0px;
+    margin:0px
 }
 .projects{
     /* height: 400px; */
@@ -112,16 +109,60 @@ body{
     height: 500px;
     margin: 10px;
     border: 10px solid black;
-    background-color:darkkhaki
+    background-color:rgb(255, 255, 255)
 
 }
 h1{
     text-align: center;
+    font-size: 4em;
 }
 
+.title{
+    padding-bottom: 100px;
+}
 .resume{
     text-align: center;
+    height: 1150px
+}
+.resume > div{
+    display: flex;
+    justify-content: center;
+
+    /* border: 1px solid black;
+    height:4000px */
+}
+.resume > div > p{
+    padding: 60px;
+    width:320px
 }
 /* *{
     border: 1px black solid;
 } */
+a{
+    color: black;
+    text-decoration: none;
+}
+
+
+/* Make it sticky and ready to transform */
+#coolscrolly {
+    position: absolute; /* never change this */
+    top: 200px;         /* initial start position relative to container */
+    left: 50px;
+    width: 320px;
+    height: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: antiquewhite;
+    transition: transform 0.35s ease;
+    transform-origin: left center;
+
+}
+
+/* Shrink and move into header */
+body.header-scrolled #coolscrolly {
+    transform: scale(0.45) translateX(20px) translateY(-40px);
+}
+
