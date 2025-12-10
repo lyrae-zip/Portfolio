@@ -31,7 +31,7 @@ body{
     align-items: center;
     display: flex;
     margin-right: 200px;
-    width:400px
+    width:500px
 }
 /* New layout: name-wrapper holds two same-size squares (cube image and text square) */
 .name-wrapper{
@@ -45,7 +45,7 @@ body{
     background: transparent;
 }
 
-.name-wrapper .cube{
+.name-wrapper > .cube{
     /* cube removed from name-wrapper; keep a safe default in case it's reused */
     display: none;
 }
@@ -55,18 +55,18 @@ body{
     position: relative;
 }
 
-.discription .cube{
+.discription > .cube{
     position: absolute;
     width: 320px;
     height: 320px;
     object-fit: contain;
     z-index: 1;
     /* place the cube farther away from the text (more offset up-left) */
-    top: -80px;
-    left: -80px;
+    top: -120px;
+    left: -120px;
 }
 
-.discription p{
+.discription > p{
     position: relative;
     z-index: 2;
     margin: 0;
