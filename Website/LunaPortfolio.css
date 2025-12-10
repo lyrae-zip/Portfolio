@@ -14,7 +14,7 @@ body{
 /* Styles for name and center card*/
 .bannertext{
     font-size: 400%;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     gap: 1rem;
     display: flex;
     justify-content: space-between;
