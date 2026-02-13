@@ -3,9 +3,13 @@ from manim import *
 class Opener(Scene):
     def construct(self):
         # Text.set_default(color=BLACK)
-        # self.camera.background_color = WHITE
+        backgroundcolor = ManimColor("#1b212c")
+        self.camera.background_color = backgroundcolor
+        
         text=Text(
-            "Hello, \nI am Luna Miles"
+            "Questions?",
+            font="montserrat",
+            font_size="140"
         )
         self.play(Write(text))
 
