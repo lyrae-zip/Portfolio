@@ -84,6 +84,15 @@ body{
     padding: 0px 10px
 }
 
+.aboutMe{
+    padding: 20px 250px
+}
+
+.imageAndTextBio{
+    display:flex;
+    height:400px
+}
+
 .footertext{
     /* position: fixed; */
     bottom: 0;
@@ -109,18 +118,20 @@ body{
     width: 500px;
     height: 500px;
     margin: 10px;
-    border: 10px solid black;
-    background-color:rgb(255, 255, 255)
+    /* border: 10px solid black;
+    background-color:rgb(255, 255, 255) */
 
 }
 .projects > a{
     width: 500px;
     height: 500px;
     margin: 10px;
-    border: 10px solid black;
-    background-color:rgb(255, 255, 255)
+    /* border: 10px solid black;
+    background-color:rgb(255, 255, 255) */
 
 }
+
+
 
 
 .project > p{
