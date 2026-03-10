@@ -46,7 +46,7 @@ body{
 .discription > .cube{
     position: absolute;
     width: 320px;
-    height: 320px;
+    /* height: 320px; */
     object-fit: contain;
     z-index: 1;
     /* place the cube farther away from the text (more offset up-left) */

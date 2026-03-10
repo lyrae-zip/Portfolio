@@ -1,3 +1,0 @@
-# This file is used internally by FFMPEG.
-file 'file:/home/lyrae-zip/Documents/GitHub/Portfolio/manimations/media/videos/opener/1080p60/partial_movie_files/Opener/3305465539_3680000397_223132457.mp4'
-file 'file:/home/lyrae-zip/Documents/GitHub/Portfolio/manimations/media/videos/opener/1080p60/partial_movie_files/Opener/466703027_2688965532_186206399.mp4'
