@@ -55,7 +55,45 @@ body{
     border-radius: 20px;
     padding:40px;
     font-size: 2em;
+
+    display: flex;
+    align-items: center;
 }
+
 .header, .knowhow, .education-certs, .projects {
     background-color: rgb(58, 23, 23);
 }
+
+.header{
+    height: 20px;
+    font-size: 1.5em;
+
+    display: flex;
+    flex-direction: row;
+    width:100%;
+}
+.header-text > a{
+    color: white;
+    text-decoration: none;
+}
+.right{
+    margin-right: auto;
+}
+
+.grid > .selfie{
+    background-color: transparent;
+    padding: 0px;
+}
+
+.selfie > img{
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+
+
+.nameplate{
+    font-family: 'Climate Crisis', YEAR, cursive;
+    font-size: 3em;
+}
+
