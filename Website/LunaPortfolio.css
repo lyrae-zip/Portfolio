@@ -16,7 +16,7 @@
       "knowhow knowhow"
       "python java"
       "lua web"
-      "education-certs education-certs"
+      "educationCerts educationCerts"
       "programming office"
       "MTCHS resume"
       "projects projects"
@@ -38,7 +38,7 @@
 .grid > .lua                  { grid-area: lua; }
 .grid > .web                  { grid-area: web; }
 
-.grid > .education-certs      { grid-area: education-certs; }
+.grid > .educationCerts       { grid-area: educationCerts; }
 .grid > .MTCHS                { grid-area: MTCHS; }
 .grid > .office               { grid-area: office; }
 .grid > .programming          { grid-area: programming; }
@@ -63,12 +63,12 @@ body{
     align-items: center;
     font-family: 'Special Gothic Expanded One', cursive;
 }
-.grid > *:hover:not(.selfie, .header, .knowhow, .education-certs, .projects){
+.grid > *:hover:not(.selfie, .header, .knowhow, .educationCerts, .projects){
     background-color: rgb(143, 72, 72, 0.8);
     cursor: pointer;
 }
 
-.header, .knowhow, .education-certs, .projects {
+.header, .knowhow, .educationCerts, .projects {
     background-color: rgb(58, 23, 23);
     font-family: 'Climate Crisis', cursive;
     font-weight: 200;
@@ -97,7 +97,7 @@ body{
         text-decoration: none;
         padding: 0 1em;
     }
-    .nav-right {
+    .navRight {
         margin-left: auto;
         display: flex;
         gap: 1em;
@@ -181,6 +181,11 @@ body{
     transform: rotate(-30deg);
 }
 
+#maddysmachinesModal > p, #maddysmachinesModal > img {
+    margin-top: 20px;
+    font-size: 1.5em;
+}
+
 .modal {
     display: none;
     position: fixed; 
@@ -193,26 +198,54 @@ body{
     overflow: auto; 
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
-
-.modal-content {
+.modalContent {
     background-color: rgb(143, 72, 72);
     margin: auto;
     padding: 40px;
-    width: 60%;
+    width: 80%;
     border-radius: 20px;
     font-family: 'Special Gothic Expanded One', cursive;
     color: white;
 }
-.modal-content > div > h2 {
+.modalContent > div > h2 {
     font-family: 'Climate Crisis', cursive;
     font-weight: 200;
     letter-spacing: 0.05em;
     font-size: 3em;
 }
-.modal-content > div > hr {
+.modalContent > div > hr {
     color : white;
     margin: 20px 0px
 }
+
+.modalHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+}
+.modalHeader > h2 {
+    font-family: 'Climate Crisis', cursive;
+    font-weight: 200;
+    letter-spacing: 0.05em;
+    font-size: 3em;
+
+}
+.modalHeader > div {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    overflow: hidden;
+    height: 100%;
+    margin-right: 20px;
+
+}
+.modalHeader > div > img {
+    height: 70px;
+    width: auto;
+}
+
 
 /* close button */
 .close {

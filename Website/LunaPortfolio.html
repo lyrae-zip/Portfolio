@@ -19,7 +19,7 @@
         <div class="header">
             <div class="navbar"> 
                 <a href="#nameplate">LUNA MILES</a>
-                <div class="nav-right">
+                <div class="navRight">
                     <a href="#home">ABOUT</a>
                     <a href="#projects">PROJECTS</a>
                     <a href="#education">EDUCATION</a>
@@ -30,7 +30,7 @@
         <div class="selfie">
             <img src="../Images/Luna1.png" alt="Luna Selfie">
         </div>
-        <div class="nameplate" id="nameplate">LUNA MILES</div>
+        <div class="nameplate" id="nameplate">HI, IM LUNA</div>
         <div class="aboutme">
             My name is Luna Miles. and I am a junior at Meridian Technical Charter High School. Ive always love computers and programming and I think my eagerness to learn and code relects that. I love working with people and you could be no different.
         </div>
@@ -40,7 +40,7 @@
         <div class="lua" id="lua">LUA</div>
         <div class="web" id="web">WEB</div>
 
-        <div class="education-certs" id="education">EDUCATION, CERTIFICATIONS, AND RESUME</div>
+        <div class="educationCerts" id="education">EDUCATION, CERTIFICATIONS, AND RESUME</div>
         <div class="MTCHS" id="mtchs">MTCHS</div>
         <div class="office" id="office">Microsoft Office</div>
         <div class="programming" id="programming">PROGRAMMING</div>
@@ -49,11 +49,11 @@
         <div class="projects" id="projects">PROJECTS</div>
         <div class="maddysmachines" id="maddysmachines">MADDYS MACHINES</div>
         <div class="emberfall" id="emberfall">EMBERFALL</div>
-        <div class="spintegration" id="spintegration">SPINTEGRATION</div>
+        <div class="spintegration" id="spintegration">SIMPLY PLURAL SYNC</div>
     </div>
 
     <div class="modal" id="modal">
-        <div class="modal-content">
+    <div class="modalContent">
             <span class="close">&times;</span>
 
             <div id="pythonModal">
@@ -111,21 +111,57 @@
                 <iframe src="../Luna Resume.pdf" width="100%" height="500px"></iframe>
             </div>
             <div id="maddysmachinesModal">
-                <h2>MADDY'S MACHINES</h2>
+                <div class="modalHeader">
+                    <h2>MADDY'S MACHINES</h2>
+                    <div class="headerIcons">
+                        <img src="../Icons/ComputerCraft.png">
+                        <img src="../Icons/Lua.png">
+                        <img src="../Icons/GoogleSheets.png">
+                        <img src="../Icons/Javascript.png">
+                    </div>
+                </div>
                 <hr>
                 <p>
-                    Maddy's Machines description goes here.                
+                    Maddy's Machines is a program made in Lua for ComputerCraft and the AE2 mod for minecraft. It is designed to display all items
+                    inside your storage system into a neatly formatted google sheet. It properly handles item removal, addition, and stacking.
+                    because it is formatted into a google sheet, it can be easily accessed and viewed on any device. This also means it can be 
+                    formatted easily using forumlas, conditional formatting, etc. I made this program for myself because I got sick of rummaging through 
+                    my storage and being suprised when I was missing something. 
+                    
+                    It is also open source and available on my github!
                 </p>
+                <img src="../Images/Showcase.gif" alt="Maddy's Machines">
+                <p>
+                    Maddy's Machines is a project I am very proud of. It was a fun and challenging project to make and I learned a lot from it. 
+                    I intend to maintain and update this program as I get new requests and ideas. I actively use this in my own survival world 
+                    for better organization. I currently have about 600 unique items in my system, and 70000 total items and I have not noticed
+                    performance issues. This project was the first project that utilized Lua, and is actually what I learned lua specfically for.
+                </p>
+                <img src="../Images/Spreadsheet.png" alt="Maddy's Machines Spreadsheet">
+
             </div>
             <div id="emberfallModal">
-                <h2>EMBERFALL</h2>
+                <div class="modalHeader">
+                    <h2>EMBERFALL</h2>
+                    <div class="headerIcons">
+                        <img src="../Icons/Lua.png">
+                        <img src="../Icons/Balatro.png">
+                    </div>
+                </div>
                 <hr>
                 <p>
                     Emberfall description goes here.
                 </p>
             </div>
             <div id="spintegrationModal">
-                <h2>SPINTEGRATION</h2>
+                <div class="modalHeader">
+                    <h2>SIMPLY PLURAL SYNC</h2>
+                    <div class="headerIcons">
+                        <img src="../Icons/Apparyllis.png">
+                        <img src="../Icons/Shortcuts.png">
+
+                    </div>
+                </div>
                 <hr>
                 <p>
                     Spintegration description goes here.
@@ -210,6 +246,9 @@
                 case "emberfall":
                     emberfallModal.style.display = "block";
                     break;
+                case "spintegration":
+                    spintegrationModal.style.display = "block";
+                    break;
                 default:
                     break;
             }
@@ -225,6 +264,7 @@
         resume.onclick = function() { showModalFor(this); };
         maddysmachines.onclick = function() { showModalFor(this); };
         emberfall.onclick = function() { showModalFor(this); };
+        spintegration.onclick = function() { showModalFor(this); };
         span.onclick = function() {
             modal.style.display = "none";
         }
