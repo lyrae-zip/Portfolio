@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Luna Miles</title>
     <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="LunaPortfolio.css">
+    <link rel="stylesheet" href="Portfolio.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -35,80 +35,54 @@
             My name is Luna Miles. and I am a junior at Meridian Technical Charter High School. Ive always love computers and programming and I think my eagerness to learn and code relects that. I love working with people and you could be no different.
         </div>
         <div class="knowhow" id="home">KNOW HOW</div>
-        <div class="python" id="python">PYTHON</div>
-        <div class="java" id="java">JAVA</div>
-        <div class="lua" id="lua">LUA</div>
-        <div class="web" id="web">WEB</div>
+        <div class="python" id="python">
+            <h2>PYTHON</h2>
+            <ul>
+                <li>Tinkered with Python for two years.</li>
+                <li>I have high experience in the Manim python animation library.</li>
+            </ul>
+        </div>
+        <div class="java" id="java">
+            <h2>JAVA</h2>
+            <ul>
+                <li>Learned Java in my AP Computer Science class.</li>
+                <li>Have made multiple small projects in java, including a few android apps.</li>
+            </ul>
+        </div>
+        <div class="lua" id="lua">
+            <h2>LUA</h2>
+            <ul>
+                <li>Learned Lua for use in ComputerCraft.</li>
+                <li>I am continuing to use Lua for a large Balatro content mod</li>
+            </ul>
+        </div>
+        <div class="web" id="web">
+            <h2>WEB</h2>
+            <ul>
+                <li>Learned HTML, CSS, and JavaScript for web development.</li>
+                <li>The website youre looking at was built with my own skills</li>
+            </ul>
+        </div>
 
         <div class="educationCerts" id="education">EDUCATION, CERTIFICATIONS, AND RESUME</div>
-        <div class="MTCHS" id="mtchs">MTCHS</div>
-        <div class="office" id="office">Microsoft Office</div>
-        <div class="programming" id="programming">PROGRAMMING</div>
+        <a href="https://www.credly.com/users/luna_miles" target="_blank" rel="noopener noreferrer" style="text-decoration: none;"><div class="certifications" id="certifications">CERTIFICATIONS</div></a>
         <div class="resume" id="resume">View My Resume!</div>
 
         <div class="projects" id="projects">PROJECTS</div>
         <div class="maddysmachines" id="maddysmachines">MADDYS MACHINES</div>
         <div class="emberfall" id="emberfall">EMBERFALL</div>
         <div class="spintegration" id="spintegration">SIMPLY PLURAL SYNC</div>
+        <div class="printer" id="printer">3D PRINTER REPAIR AND SETUP</div>
     </div>
 
     <div class="modal" id="modal">
-    <div class="modalContent">
+        <div class="modalContent">
             <span class="close">&times;</span>
 
-            <div id="pythonModal">
-                <h2>PYTHON</h2>
-                <hr>
-                <p>
-                    Python description goes here.
-                </p>
-            </div>
-            <div id="javaModal">
-                <h2>JAVA</h2>
-                <hr>
-                <p>
-                    Java description goes here.
-                </p>
-            </div>
-            <div id="luaModal">
-                <h2>LUA</h2>
-                <hr>
-                <p>
-                    Lua description goes here.
-                </p>
-            </div>
-            <div id="webModal">
-                <h2>WEB</h2>
-                <hr>
-                <p>
-                    Web description goes here.
-                </p>
-            </div>
-            <div id="mtchsModal">
-                <h2>MTCHS</h2>
-                <hr>
-                <p>
-                    MTCHS description goes here.
-                </p>
-            </div>
-            <div id="officeModal">
-                <h2>OFFICE</h2>
-                <hr>
-                <p>
-                    Office description goes here.
-                </p>
-            </div>
-            <div id="programmingModal">
-                <h2>PROGRAMMING</h2>
-                <hr>
-                <p>
-                    Programming description goes here.
-                </p>
-            </div>
             <div id="resumeModal">
                 <h2>RESUME</h2>
                 <hr>
-                <iframe src="../Luna Resume.pdf" width="100%" height="500px"></iframe>
+                <iframe src="../Luna Resume.pdf" width="100%" height="1500px"></iframe>
             </div>
             <div id="maddysmachinesModal">
                 <div class="modalHeader">
@@ -167,76 +141,70 @@
                     Spintegration description goes here.
                 </p>
             </div>
+            <div id="printerModal">
+                <div class="modalHeader">
+                    <h2>3D PRINTER REPAIR AND SETUP</h2>
+                    <div class="headerIcons">
+                    </div>
+                </div>
+                <hr>
+                <p>
+                    A few years back, my dads coworker had a 3D printer that wouldnt work. The coworker
+                    passed it on to me to tinker around with. It ended up sitting in my closet for years.      
+                    Before this project started, there was countless times where I needed something 
+                    printed and has to pay my school to print for me. After enough times I realized I just 
+                    should fix the printer I had in my room. The first step was to research what the printer
+                    actually was. With a simple reverse image search, It was a GeeeTech Rostock 301. I looked
+                    up this printer and found both the build instructions, the software, and the
+                </p>
+            </div>
         </div>
     </div>
 
     <script>
         var modal = document.getElementById("modal");
+        var modalContent = document.querySelector(".modalContent");
         var span = document.getElementsByClassName("close")[0];
 
-
-        var python = document.getElementById("python");
-        var java = document.getElementById("java");
-        var lua = document.getElementById("lua");
-        var web = document.getElementById("web");
-        var mtchs = document.getElementById("mtchs");
-        var office = document.getElementById("office");
-        var programming = document.getElementById("programming");
         var resume = document.getElementById("resume");
         var maddysmachines = document.getElementById("maddysmachines");
         var emberfall = document.getElementById("emberfall");
         var spintegration = document.getElementById("spintegration");
+        var printer = document.getElementById("printer");
 
-
-        var pythonModal = document.getElementById("pythonModal");
-        var javaModal = document.getElementById("javaModal");
-        var luaModal = document.getElementById("luaModal");
-        var webModal = document.getElementById("webModal");
-        var mtchsModal = document.getElementById("mtchsModal");
-        var officeModal = document.getElementById("officeModal");
-        var programmingModal = document.getElementById("programmingModal");
         var resumeModal = document.getElementById("resumeModal");
         var maddysmachinesModal = document.getElementById("maddysmachinesModal");
         var emberfallModal = document.getElementById("emberfallModal");
         var spintegrationModal = document.getElementById("spintegrationModal");
+        var printerModal = document.getElementById("printerModal");
+
+        var animationDuration = 250;
+
+        function hideModal() {
+            modal.classList.remove("fade-in");
+            modal.classList.add("fade-out");
+            modalContent.classList.remove("fade-in");
+            modalContent.classList.add("fade-out");
+
+            setTimeout(function() {
+                modal.style.display = "none";
+            }, animationDuration);
+        }
 
         function showModalFor(element) {
-
             modal.style.display = "block";
-            pythonModal.style.display = "none";
-            javaModal.style.display = "none";
-            luaModal.style.display = "none";
-            webModal.style.display = "none";
-            mtchsModal.style.display = "none";
-            officeModal.style.display = "none";
-            programmingModal.style.display = "none";
+            modal.classList.remove("fade-out");
+            modal.classList.add("fade-in");
+            modalContent.classList.remove("fade-out");
+            modalContent.classList.add("fade-in");
+
             resumeModal.style.display = "none";
             maddysmachinesModal.style.display = "none";
             emberfallModal.style.display = "none";
             spintegrationModal.style.display = "none";
+            printerModal.style.display = "none";
 
             switch (element.id) {
-                case "python":
-                    pythonModal.style.display = "block";
-                    break;
-                case "java":
-                    javaModal.style.display = "block";
-                    break;
-                case "lua":
-                    luaModal.style.display = "block";
-                    break;
-                case "web":
-                    webModal.style.display = "block";
-                    break;
-                case "mtchs":
-                    mtchsModal.style.display = "block";
-                    break;  
-                case "office":
-                    officeModal.style.display = "block";
-                    break;
-                case "programming":
-                    programmingModal.style.display = "block";
-                    break;
                 case "resume":
                     resumeModal.style.display = "block";
                     break;
@@ -249,28 +217,23 @@
                 case "spintegration":
                     spintegrationModal.style.display = "block";
                     break;
-                default:
+                case "printer":
+                    printerModal.style.display = "block";
                     break;
             }
         }
 
-        python.onclick = function() { showModalFor(this); };
-        java.onclick = function() { showModalFor(this); };
-        lua.onclick = function() { showModalFor(this); };
-        web.onclick = function() { showModalFor(this); };
-        mtchs.onclick = function() { showModalFor(this); };
-        office.onclick = function() { showModalFor(this); };
-        programming.onclick = function() { showModalFor(this); };
         resume.onclick = function() { showModalFor(this); };
         maddysmachines.onclick = function() { showModalFor(this); };
         emberfall.onclick = function() { showModalFor(this); };
         spintegration.onclick = function() { showModalFor(this); };
-        span.onclick = function() {
-            modal.style.display = "none";
-        }
+        printer.onclick = function() { showModalFor(this); };
+
+        span.onclick = hideModal;
+
         window.onclick = function(event) {
             if (event.target == modal) {
-                modal.style.display = "none";
+                hideModal();
             }
         }
     </script>
