@@ -15,26 +15,29 @@
     <link href="https://fonts.googleapis.com/css2?family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="grid">
-        <div class="header">
-            <div class="navbar"> 
-                <a href="#nameplate">LUNA MILES</a>
-                <div class="navRight">
-                    <a href="#home">ABOUT</a>
-                    <a href="#projects">PROJECTS</a>
-                    <a href="#education">EDUCATION</a>
-                </div>
+    <div class="header">
+        <div class="navbar"> 
+            <a href="#nameplate">LUNA MILES</a>
+            <div class="navRight">
+                <a href="#top">ABOUT</a>
+                <a href="#projects">PROJECTS</a>
+                <a href="#education">RESUME</a>
+                <a href="#knowhow">KNOW HOW</a>
             </div>
         </div>
-
+    </div>
+    <div class="grid">
         <div class="selfie">
-            <img src="../Images/Luna1.png" alt="Luna Selfie">
+
         </div>
         <div class="nameplate" id="nameplate">HI, IM LUNA</div>
         <div class="aboutme">
             My name is Luna Miles. and I am a junior at Meridian Technical Charter High School. Ive always love computers and programming and I think my eagerness to learn and code relects that. I love working with people and you could be no different.
         </div>
-        <div class="knowhow" id="home">KNOW HOW</div>
+        <div class="funStuff">
+
+        </div>
+        <div class="knowhow" id="knowhow">KNOW HOW</div>
         <div class="python" id="python">
             <h2>PYTHON</h2>
             <ul>
@@ -45,7 +48,7 @@
         <div class="java" id="java">
             <h2>JAVA</h2>
             <ul>
-                <li>Learned Java in my AP Computer Science class.</li>
+                <li>Learned Java in my Computer Science class.</li>
                 <li>Have made multiple small projects in java, including a few android apps.</li>
             </ul>
         </div>
@@ -95,23 +98,27 @@
                     </div>
                 </div>
                 <hr>
-                <p>
-                    Maddy's Machines is a program made in Lua for ComputerCraft and the AE2 mod for minecraft. It is designed to display all items
-                    inside your storage system into a neatly formatted google sheet. It properly handles item removal, addition, and stacking.
-                    because it is formatted into a google sheet, it can be easily accessed and viewed on any device. This also means it can be 
-                    formatted easily using forumlas, conditional formatting, etc. I made this program for myself because I got sick of rummaging through 
-                    my storage and being suprised when I was missing something. 
-                    
-                    It is also open source and available on my github!
-                </p>
-                <img src="../Images/Showcase.gif" alt="Maddy's Machines">
-                <p>
-                    Maddy's Machines is a project I am very proud of. It was a fun and challenging project to make and I learned a lot from it. 
-                    I intend to maintain and update this program as I get new requests and ideas. I actively use this in my own survival world 
-                    for better organization. I currently have about 600 unique items in my system, and 70000 total items and I have not noticed
-                    performance issues. This project was the first project that utilized Lua, and is actually what I learned lua specfically for.
-                </p>
-                <img src="../Images/Spreadsheet.png" alt="Maddy's Machines Spreadsheet">
+                <div class="modalDescription">
+                    <p>
+                        Maddy's Machines is a program made in Lua for ComputerCraft and the AE2 mod for minecraft. It is designed to display all items
+                        inside your storage system into a neatly formatted google sheet. It properly handles item removal, addition, and stacking.
+                        because it is formatted into a google sheet, it can be easily accessed and viewed on any device. This also means it can be 
+                        formatted easily using forumlas, conditional formatting, etc. I made this program for myself because I got sick of rummaging through 
+                        my storage and being suprised when I was missing something. 
+                        
+                        It is also open source and available on my github!
+                    </p>
+                    <a href="https://github.com/lyrae-zip/CC-Tweaked-spreadsheet-via-AE2" target=_blank" rel="noopener noreferrer"><button>View on GitHub</button></a>
+                    <img src="../Images/Showcase.gif" alt="Maddy's Machines">
+                    <p>
+                        Maddy's Machines is a project I am very proud of. It was a fun and challenging project to make and I learned a lot from it. 
+                        I intend to maintain and update this program as I get new requests and ideas. I actively use this in my own survival world 
+                        for better organization. I currently have about 600 unique items in my system, and 70000 total items and I have not noticed
+                        performance issues. This project was the first project that utilized Lua, and is actually what I learned lua specfically for.
+                    </p>
+                    <img src="../Images/Spreadsheet.png" alt="Maddy's Machines Spreadsheet">
+                    <a href="https://docs.google.com/spreadsheets/d/13X4d9vAVCGdzr0-a78UpetSO_I-EmeEJkNhSfuNz9so/edit?usp=sharing" target="_blank" rel="noopener noreferrer"><button>View the Spreadsheet</button></a>
+                </div>
 
             </div>
             <div id="emberfallModal">
@@ -123,9 +130,15 @@
                     </div>
                 </div>
                 <hr>
-                <p>
-                    Emberfall description goes here.
-                </p>
+                <div class="modalDescription">
+                    <p>
+                        Emberfall is an Indev content mod for the viral card game Balatro. I am working this mod
+                        in collaboration with my partner. I am the developver of the mod, He is the artist of the mod.
+                        This mod aims to add new mechanics, cards, and new ways to play the game.
+                    </p>
+                    <img src="../Images/EmberfallContent.png">
+                    <a href="https://github.com/lyrae-zip/Emberfall" target="_blank" rel="noopener noreferrer"><button>View on GitHub</button></a>
+                </div>
             </div>
             <div id="spintegrationModal">
                 <div class="modalHeader">
@@ -162,78 +175,83 @@
     </div>
 
     <script>
-        var modal = document.getElementById("modal");
-        var modalContent = document.querySelector(".modalContent");
-        var span = document.getElementsByClassName("close")[0];
 
-        var resume = document.getElementById("resume");
-        var maddysmachines = document.getElementById("maddysmachines");
-        var emberfall = document.getElementById("emberfall");
-        var spintegration = document.getElementById("spintegration");
-        var printer = document.getElementById("printer");
 
-        var resumeModal = document.getElementById("resumeModal");
-        var maddysmachinesModal = document.getElementById("maddysmachinesModal");
-        var emberfallModal = document.getElementById("emberfallModal");
-        var spintegrationModal = document.getElementById("spintegrationModal");
-        var printerModal = document.getElementById("printerModal");
+        // modal stuff goes here
+        {
+            var modal = document.getElementById("modal");
+            var modalContent = document.querySelector(".modalContent");
+            var span = document.getElementsByClassName("close")[0];
 
-        var animationDuration = 250;
+            var resume = document.getElementById("resume");
+            var maddysmachines = document.getElementById("maddysmachines");
+            var emberfall = document.getElementById("emberfall");
+            var spintegration = document.getElementById("spintegration");
+            var printer = document.getElementById("printer");
 
-        function hideModal() {
-            modal.classList.remove("fade-in");
-            modal.classList.add("fade-out");
-            modalContent.classList.remove("fade-in");
-            modalContent.classList.add("fade-out");
+            var resumeModal = document.getElementById("resumeModal");
+            var maddysmachinesModal = document.getElementById("maddysmachinesModal");
+            var emberfallModal = document.getElementById("emberfallModal");
+            var spintegrationModal = document.getElementById("spintegrationModal");
+            var printerModal = document.getElementById("printerModal");
 
-            setTimeout(function() {
-                modal.style.display = "none";
-            }, animationDuration);
-        }
+            var animationDuration = 250;
 
-        function showModalFor(element) {
-            modal.style.display = "block";
-            modal.classList.remove("fade-out");
-            modal.classList.add("fade-in");
-            modalContent.classList.remove("fade-out");
-            modalContent.classList.add("fade-in");
+            function hideModal() {
+                modal.classList.remove("fade-in");
+                modal.classList.add("fade-out");
+                modalContent.classList.remove("fade-in");
+                modalContent.classList.add("fade-out");
 
-            resumeModal.style.display = "none";
-            maddysmachinesModal.style.display = "none";
-            emberfallModal.style.display = "none";
-            spintegrationModal.style.display = "none";
-            printerModal.style.display = "none";
-
-            switch (element.id) {
-                case "resume":
-                    resumeModal.style.display = "block";
-                    break;
-                case "maddysmachines":
-                    maddysmachinesModal.style.display = "block";
-                    break;
-                case "emberfall":
-                    emberfallModal.style.display = "block";
-                    break;
-                case "spintegration":
-                    spintegrationModal.style.display = "block";
-                    break;
-                case "printer":
-                    printerModal.style.display = "block";
-                    break;
+                setTimeout(function() {
+                    modal.style.display = "none";
+                }, animationDuration);
             }
-        }
 
-        resume.onclick = function() { showModalFor(this); };
-        maddysmachines.onclick = function() { showModalFor(this); };
-        emberfall.onclick = function() { showModalFor(this); };
-        spintegration.onclick = function() { showModalFor(this); };
-        printer.onclick = function() { showModalFor(this); };
+            function showModalFor(element) {
+                modal.style.display = "block";
+                modal.classList.remove("fade-out");
+                modal.classList.add("fade-in");
+                modalContent.classList.remove("fade-out");
+                modalContent.classList.add("fade-in");
 
-        span.onclick = hideModal;
+                resumeModal.style.display = "none";
+                maddysmachinesModal.style.display = "none";
+                emberfallModal.style.display = "none";
+                spintegrationModal.style.display = "none";
+                printerModal.style.display = "none";
 
-        window.onclick = function(event) {
-            if (event.target == modal) {
-                hideModal();
+                switch (element.id) {
+                    case "resume":
+                        resumeModal.style.display = "block";
+                        break;
+                    case "maddysmachines":
+                        maddysmachinesModal.style.display = "block";
+                        break;
+                    case "emberfall":
+                        emberfallModal.style.display = "block";
+                        break;
+                    case "spintegration":
+                        spintegrationModal.style.display = "block";
+                        break;
+                    case "printer":
+                        printerModal.style.display = "block";
+                        break;
+                }
+            }
+
+            resume.onclick = function() { showModalFor(this); };
+            maddysmachines.onclick = function() { showModalFor(this); };
+            emberfall.onclick = function() { showModalFor(this); };
+            spintegration.onclick = function() { showModalFor(this); };
+            printer.onclick = function() { showModalFor(this); };
+
+            span.onclick = hideModal;
+
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    hideModal();
+                }
             }
         }
     </script>

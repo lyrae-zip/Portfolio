@@ -1,7 +1,12 @@
+:root {
+    --gridColor: rgb(58, 23, 23);
+    --backgroundColor: rgb(143, 72, 72);
+    --titleColour: rgb(99, 45, 45);
+}
+
 html{
     scroll-behavior: smooth;
 }
-
 
 .grid{
     display: grid;
@@ -9,28 +14,29 @@ html{
     grid-auto-rows: minmax(40px, auto);
     gap: 40px;
     margin: 40px;
+    margin-top: 170px;
 
     grid-template-areas:
-      "header header"
-      "nameplate selfie"
-      "aboutme selfie"
-      "educationCerts educationCerts"
-      "certifications resume"
-      "projects projects"
-      "maddysmachines emberfall"
-      "spintegration printer"
-      "knowhow knowhow"
-      "python java"
-      "lua web"
+      "nameplate        selfie"
+      "aboutme          selfie"
+      "funStuff         selfie"
+      "educationCerts   educationCerts"
+      "certifications   resume"
+      "projects         projects"
+      "maddysmachines   emberfall"
+      "spintegration    printer"
+      "knowhow          knowhow"
+      "python           java"
+      "lua              web"
       ; 
 
 }
 
 
-.grid > .header               { grid-area: header; }
 .grid > .nameplate            { grid-area: nameplate; }
 .grid > .selfie               { grid-area: selfie; }
 .grid > .aboutme              { grid-area: aboutme; }
+.grid > .funStuff             { grid-area: funStuff; }
 
 .grid > .knowhow              { grid-area: knowhow; }
 .grid > .python               { grid-area: python; }
@@ -49,26 +55,46 @@ html{
 
 
 body{
-    background-color: rgb(99, 45, 45);
+    background-color: var(--titleColour);
 }
-.grid > *{
+.grid > *, .header{
     color: white;
-    background-color: rgb(143, 72, 72);
+    background-color: var(--backgroundColor);
     border-radius: 30px;
     padding:40px;
     font-size: 2em;
-
 
     font-family: 'Special Gothic Expanded One', cursive;
     border: 3px solid transparent;
     transition: background-color 0.2s ease-in-out, border 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
-.grid > *:hover:not(.selfie, .header, .knowhow, .educationCerts, .projects, .nameplate, .aboutme){
+.grid > *:hover:not(.selfie, .header, .knowhow, .educationCerts, .projects, .nameplate, .aboutme, .funStuff){
     background-color: rgb(143, 72, 72, 0.8);
-    cursor: pointer;
     border: 3px solid white;
     transform: scale(1.02);
     transition: transform 0.2s ease-in-out;
+}
+.maddysmachines, .emberfall, .spintegration, .printer, .resume, .certifications {
+    cursor: pointer;
+}
+
+button {
+    background-color: transparent;
+    color: white;
+    padding: 10px 20px;
+    font-size: 2em;
+    cursor: pointer;
+    border: 2px solid rgba(255, 255, 255, 0);
+    border-radius: 15px;
+    background-color: var(--titleColour);
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+button:hover {
+    color: rgb(255, 255, 255);
+    transform: scale(1.05);
+    border: 2px solid white;
+    border-radius: 15px;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 
 .grid ol, .grid li {
@@ -77,7 +103,7 @@ body{
 }
 
 .header, .knowhow, .educationCerts, .projects {
-    background-color: rgb(58, 23, 23);
+    background-color: var(--gridColor);
     font-family: 'Climate Crisis', cursive;
     font-weight: 200;
     letter-spacing: 0.05em;
@@ -85,54 +111,58 @@ body{
 }
 
 
+/* NAVBAR STYLES */
 .header{
+    position: fixed;
+    top: 0;
+    z-index: 2;
     height: 20px;
     font-size: 1.5em;
 
+    margin: 40px;
     display: flex;
     flex-direction: row;
     width:100%;
+    width: calc(100% - 80px);
 
+    border: 3px solid white;
     overflow-y: hidden;
+    background-color: var(--gridColor); /* keep the header background under scroll */
 }
+.navbar {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 0 1em;
+    transition: color 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+.navbar a:hover {
+    transform: translateY(-2px);
+}
+.navRight {
+    margin-left: auto;
+    display: flex;
+    gap: 1em;
+    transition: transform 0.2s ease-in-out;
 
-/* Navbar style */
-    .navbar {
-        display: flex;
-        align-items: center;
-        width: 100%;
-    }
-    .navbar a {
-        color: white;
-        text-decoration: none;
-        padding: 0 1em;
-        transition: color 0.2s ease-in-out, transform 0.2s ease-in-out;
-    }
-    .navbar a:hover {
-        transform: translateY(-2px);
-    }
-    .navRight {
-        margin-left: auto;
-        display: flex;
-        gap: 1em;
-        transition: transform 0.2s ease-in-out;
-
-    }
-    .navRight a:hover {
-        transform: scale(1.1);
-        transition: transform 0.2s ease-in-out;
-    }
+}
+.navRight a:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s ease-in-out;
+}
 /* ----------- */
-
 
 .grid > .selfie{
     background-color: transparent;
     padding: 0px;
-}
-.selfie > img{
-    width: 100%;
-    height: auto;
-    border-radius: 20px;
+    background-image: url('../Images/Luna1.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .nameplate{
@@ -140,15 +170,19 @@ body{
     font-size: 3em;
     font-weight: 200;
     letter-spacing: 0.05em;
-
+    display: flex;
+}
+.nameplate, .aboutme{
+    display: flex;
+    align-items: center;
 }
 
 
-
+/* MODAL STYLES */
 .modal {
     display: none;
     position: fixed; 
-    z-index: 1;
+    z-index: 1000;
     padding-top: 100px; 
     left: 0;
     top: 0;
@@ -160,7 +194,7 @@ body{
     animation-fill-mode: forwards;
 }
 .modalContent {
-    background-color: rgb(143, 72, 72);
+    background-color: var(--backgroundColor);
     margin: auto;
     padding: 40px;
     width: 60%;
@@ -170,26 +204,32 @@ body{
     animation-duration: 0.25s;
     animation-fill-mode: forwards;
     transform-origin: top center;
+    z-index: 3;
 }
 .modalContent p {
     font-size: 1.5em;
 }
-
+.modalDescription {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.modalDescription * {
+    margin: 20px 0px;
+}
 @keyframes fadeInModalBackground {
     from { opacity: 0; }
     to   { opacity: 1; }
 }
-
 @keyframes fadeOutModalBackground {
     from { opacity: 1; }
     to   { opacity: 0; }
 }
-
 @keyframes fadeInModalContent {
     from { opacity: 0; transform: translateY(-10px) scaleX(1) scaleY(0.1); }
     to   { opacity: 1; transform: translateY(0) scaleX(1) scaleY(1); }
 }
-
 @keyframes fadeOutModalContent {
     from { opacity: 1; transform: translateY(0) scaleX(1) scaleY(1); }
     to   { opacity: 0; transform: translateY(-10px) scaleX(1) scaleY(0.1); }
@@ -198,7 +238,6 @@ body{
 .modal.fade-out { animation-name: fadeOutModalBackground; }
 .modalContent.fade-in { animation-name: fadeInModalContent; }
 .modalContent.fade-out { animation-name: fadeOutModalContent; }
-
 
 .modalContent > div > h2 {
     font-family: 'Climate Crisis', cursive;
@@ -238,9 +277,6 @@ body{
     height: 70px;
     width: auto;
 }
-
-
-/* close button */
 .close {
   color: #aaaaaa;
   float: right;
@@ -253,3 +289,4 @@ body{
   text-decoration: none;
   cursor: pointer;
 }
+/* ********************************* */
