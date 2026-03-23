@@ -32,10 +32,10 @@
         </div>
         <div class="nameplate" id="nameplate">HI, IM LUNA</div>
         <div class="aboutme">
-            My name is Luna Miles. and I am a junior at Meridian Technical Charter High School. Ive always love computers and programming and I think my eagerness to learn and code relects that. I love working with people and you could be no different.
+            My name is Luna Miles. and I am a junior at Meridian Technical Charter High School. Ive always loved computers and programming and I think my eagerness to learn and code relects that. I love working with people and you could be no different.
         </div>
-        <div class="funStuff">
-
+        <div class="learnmore" id="learnmore">
+            <h2>MORE ABOUT ME</h2>
         </div>
         <div class="knowhow" id="knowhow">KNOW HOW</div>
         <div class="python" id="python">
@@ -82,6 +82,24 @@
         <div class="modalContent">
             <span class="close">&times;</span>
 
+            <div id="learnmoreModal">
+                <h2>MORE ABOUT ME</h2>
+                <hr>
+                <div class="modalDescription">
+                    <div>
+                        TEXT TEX TEXT
+                    </div>
+                    <div>
+                        <img src="">
+                    </div>
+                    <div>
+                        MORE TEXT
+                    </div>
+                    <div>
+                        <img src="">
+                    </div>
+                </div>
+            </div>
             <div id="resumeModal">
                 <h2>RESUME</h2>
                 <hr>
@@ -108,7 +126,7 @@
                         
                         It is also open source and available on my github!
                     </p>
-                    <a href="https://github.com/lyrae-zip/CC-Tweaked-spreadsheet-via-AE2" target=_blank" rel="noopener noreferrer"><button>View on GitHub</button></a>
+                    <a href="https://github.com/lyrae-zip/CC-Tweaked-spreadsheet-via-AE2" target="_blank" rel="noopener noreferrer"><button>View on GitHub</button></a>
                     <img src="../Images/Showcase.gif" alt="Maddy's Machines">
                     <p>
                         Maddy's Machines is a project I am very proud of. It was a fun and challenging project to make and I learned a lot from it. 
@@ -188,12 +206,14 @@
             var emberfall = document.getElementById("emberfall");
             var spintegration = document.getElementById("spintegration");
             var printer = document.getElementById("printer");
+            var learnmore = document.getElementById("learnmore");
 
             var resumeModal = document.getElementById("resumeModal");
             var maddysmachinesModal = document.getElementById("maddysmachinesModal");
             var emberfallModal = document.getElementById("emberfallModal");
             var spintegrationModal = document.getElementById("spintegrationModal");
             var printerModal = document.getElementById("printerModal");
+            var learnmoreModal = document.getElementById("learnmoreModal");
 
             var animationDuration = 250;
 
@@ -220,8 +240,12 @@
                 emberfallModal.style.display = "none";
                 spintegrationModal.style.display = "none";
                 printerModal.style.display = "none";
+                learnmoreModal.style.display = "none";
 
                 switch (element.id) {
+                    case "learnmore":
+                        learnmoreModal.style.display = "block";
+                        break;
                     case "resume":
                         resumeModal.style.display = "block";
                         break;
@@ -245,6 +269,7 @@
             emberfall.onclick = function() { showModalFor(this); };
             spintegration.onclick = function() { showModalFor(this); };
             printer.onclick = function() { showModalFor(this); };
+            learnmore.onclick = function() { showModalFor(this); };
 
             span.onclick = hideModal;
 
