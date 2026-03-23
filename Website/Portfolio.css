@@ -22,8 +22,10 @@ html{
       "certifications   certifications resume        resume"
       "projects         projects       projects      projects"
       "maddysmachines   emberfall      spintegration printer"
+      "portfoliowebsite .              .             ."
       "knowhow          knowhow        knowhow       knowhow"
-      "python           java           lua           web"
+      "python           python         java          java"
+      "lua              lua            web           web"
       ; 
 
 }
@@ -42,12 +44,14 @@ html{
 
 .grid > .educationCerts       { grid-area: educationCerts; }
 .grid > .certifications       { grid-area: certifications; }
+.grid > .resume               { grid-area: resume;}
 
 .grid > .projects             { grid-area: projects; }
 .grid > .maddysmachines       { grid-area: maddysmachines; }
 .grid > .emberfall            { grid-area: emberfall; }
 .grid > .spintegration        { grid-area: spintegration; }
 .grid > .printer              { grid-area: printer; }
+.grid > .portfoliowebsite     { grid-area: portfoliowebsite; }
 
 
 body{
@@ -70,9 +74,17 @@ body{
     transform: scale(1.02);
     transition: transform 0.2s ease-in-out;
 }
-.maddysmachines, .emberfall, .spintegration, .printer, .resume, .certifications {
+/* .maddysmachines, .emberfall, .spintegration, .printer, .resume, .certifications {
     cursor: pointer;
-}
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+} */
+/* .maddysmachines {
+
+    height: 400px;
+} */
+
 
 button {
     background-color: transparent;
@@ -123,7 +135,7 @@ button:hover {
 
     border: 3px solid white;
     overflow-y: hidden;
-    background-color: var(--gridColor); /* keep the header background under scroll */
+    background-color: var(--gridColor);
 }
 .navbar {
     display: flex;
@@ -256,7 +268,7 @@ button:hover {
     font-family: 'Climate Crisis', cursive;
     font-weight: 200;
     letter-spacing: 0.05em;
-    font-size: 3em;
+    font-size: 2.5em;
 
 }
 .modalHeader > div {
@@ -286,3 +298,6 @@ button:hover {
   cursor: pointer;
 }
 /* ********************************* */
+
+
+

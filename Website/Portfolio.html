@@ -68,14 +68,18 @@
         </div>
 
         <div class="educationCerts" id="education">EDUCATION, CERTIFICATIONS, AND RESUME</div>
-        <a href="https://www.credly.com/users/luna_miles" target="_blank" rel="noopener noreferrer" style="text-decoration: none;"><div class="certifications" id="certifications">CERTIFICATIONS</div></a>
+        <a href="https://www.credly.com/users/luna_miles" target="_blank" rel="noopener noreferrer" style="text-decoration: none;" class="certifications" id="certifications"><div >CERTIFICATIONS</div></a>
         <div class="resume" id="resume">View My Resume!</div>
 
         <div class="projects" id="projects">PROJECTS</div>
-        <div class="maddysmachines" id="maddysmachines">MADDYS MACHINES</div>
+        <div class="maddysmachines" id="maddysmachines">
+            <p>MADDY'S MACHINES</p>
+
+        </div>
         <div class="emberfall" id="emberfall">EMBERFALL</div>
         <div class="spintegration" id="spintegration">SIMPLY PLURAL SYNC</div>
         <div class="printer" id="printer">3D PRINTER REPAIR AND SETUP</div>
+        <div class="portfoliowebsite" id="portfoliowebsite">PORTFOLIO WEBSITE</div>
     </div>
 
     <div class="modal" id="modal">
@@ -189,6 +193,22 @@
                     up this printer and found both the build instructions, the software, and the
                 </p>
             </div>
+            <div id="portfoliowebsiteModal">
+                <div class="modalHeader">
+                    <h2>PORTFOLIO WEBSITE</h2>
+                    <div class="headerIcons">
+                        <img src="../Icons/Html.png">
+                        <img src="../Icons/Javascript.png">
+                    </div>
+                </div>
+                <hr>
+                <div class="modalDescription">
+                    <p>
+                        Website description goes here
+                    </p>
+                    <a href="https://github.com/lyrae-zip/portfolio" target="_blank" rel="noopener noreferrer"><button>View on GitHub</button></a>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -206,6 +226,7 @@
             var emberfall = document.getElementById("emberfall");
             var spintegration = document.getElementById("spintegration");
             var printer = document.getElementById("printer");
+            var portfoliowebsite = document.getElementById("portfoliowebsite");
             var learnmore = document.getElementById("learnmore");
 
             var resumeModal = document.getElementById("resumeModal");
@@ -213,6 +234,7 @@
             var emberfallModal = document.getElementById("emberfallModal");
             var spintegrationModal = document.getElementById("spintegrationModal");
             var printerModal = document.getElementById("printerModal");
+            var portfoliowebsiteModal = document.getElementById("portfoliowebsiteModal");
             var learnmoreModal = document.getElementById("learnmoreModal");
 
             var animationDuration = 250;
@@ -240,6 +262,7 @@
                 emberfallModal.style.display = "none";
                 spintegrationModal.style.display = "none";
                 printerModal.style.display = "none";
+                portfoliowebsiteModal.style.display = "none";
                 learnmoreModal.style.display = "none";
 
                 switch (element.id) {
@@ -261,6 +284,9 @@
                     case "printer":
                         printerModal.style.display = "block";
                         break;
+                    case "portfoliowebsite":
+                        portfoliowebsiteModal.style.display = "block";
+                        break;
                 }
             }
 
@@ -269,6 +295,7 @@
             emberfall.onclick = function() { showModalFor(this); };
             spintegration.onclick = function() { showModalFor(this); };
             printer.onclick = function() { showModalFor(this); };
+            portfoliowebsite.onclick = function() { showModalFor(this); };
             learnmore.onclick = function() { showModalFor(this); };
 
             span.onclick = hideModal;
