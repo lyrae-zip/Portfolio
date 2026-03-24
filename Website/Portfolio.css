@@ -2,6 +2,7 @@
     --gridColor: rgb(58, 23, 23);
     --backgroundColor: rgb(143, 72, 72);
     --titleColour: rgb(99, 45, 45);
+    --textColor: white;
 }
 
 html{
@@ -58,7 +59,7 @@ body{
     background-color: var(--titleColour);
 }
 .grid > *, .header{
-    color: white;
+    color: var(--textColor);
     background-color: var(--backgroundColor);
     border-radius: 30px;
     padding:40px;
@@ -70,25 +71,14 @@ body{
 }
 .grid > *:hover:not(.selfie, .header, .knowhow, .educationCerts, .projects, .nameplate, .aboutme, .funStuff){
     background-color: rgb(143, 72, 72, 0.8);
-    border: 3px solid white;
+    border: 3px solid var(--textColor);
     transform: scale(1.02);
     transition: transform 0.2s ease-in-out;
 }
-/* .maddysmachines, .emberfall, .spintegration, .printer, .resume, .certifications {
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    align-items:center;
-} */
-/* .maddysmachines {
-
-    height: 400px;
-} */
-
 
 button {
     background-color: transparent;
-    color: white;
+    color: var(--textColor);
     padding: 10px 20px;
     font-size: 2em;
     cursor: pointer;
@@ -98,9 +88,9 @@ button {
     transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 button:hover {
-    color: rgb(255, 255, 255);
+    color: var(--textColor);
     transform: scale(1.05);
-    border: 2px solid white;
+    border: 2px solid var(--textColor);
     border-radius: 15px;
     transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
@@ -133,7 +123,7 @@ button:hover {
     width:100%;
     width: calc(100% - 80px);
 
-    border: 3px solid white;
+    border: 3px solid var(--textColor);
     overflow-y: hidden;
     background-color: var(--gridColor);
 }
@@ -142,15 +132,13 @@ button:hover {
     align-items: center;
     width: 100%;
 }
-.navbar a {
-    color: white;
+.navbar a, #themepicker {
+    color: var(--textColor);
     text-decoration: none;
     padding: 0 1em;
     transition: color 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
-.navbar a:hover {
-    transform: translateY(-2px);
-}
+
 .navRight {
     margin-left: auto;
     display: flex;
@@ -158,9 +146,10 @@ button:hover {
     transition: transform 0.2s ease-in-out;
 
 }
-.navRight a:hover {
+.navRight a:hover, #themepicker:hover {
     transform: scale(1.1);
     transition: transform 0.2s ease-in-out;
+    cursor: pointer;
 }
 /* ----------- */
 
@@ -186,8 +175,9 @@ button:hover {
 }
 
 
+
 /* MODAL STYLES */
-.modal {
+.modal, .themepicker {
     display: none;
     position: fixed; 
     z-index: 1000;
@@ -208,7 +198,7 @@ button:hover {
     width: 60%;
     border-radius: 20px;
     font-family: 'Special Gothic Expanded One', cursive;
-    color: white;
+    color: var(--textColor);
     animation-duration: 0.25s;
     animation-fill-mode: forwards;
     transform-origin: top center;
@@ -254,7 +244,7 @@ button:hover {
     font-size: 3em;
 }
 .modalContent > div > hr {
-    color : white;
+    color: var(--textColor);
     margin: 20px 0px
 }
 
@@ -298,6 +288,4 @@ button:hover {
   cursor: pointer;
 }
 /* ********************************* */
-
-
 
