@@ -15,14 +15,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Climate+Crisis:YEAR@1979&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
     
-    <script src="Themes/Theme.js" defer></script>
-    <link rel="stylesheet" href="Themes/Theme.css">
+    <script src="Theme.js" defer></script>
 </head>
 <body>
     <div class="header">
         <div class="navbar"> 
             <a>LUNA MILES</a>
-            <a id="themepicker">Change Theme</a>
+            <a id="themepicker" style="font-size: 0.5em;">THEME </a>
             <div class="navRight">
                 <a href="#top">ABOUT</a>
                 <a href="#projects">PROJECTS</a>
@@ -94,13 +93,15 @@
                 <h2>Change Theme</h2>
                 <hr>
                 <div class="themes">
-                    <div class="theme" id="mint" style="background-color: #05385b;">
-                        <div class="themespacer"></div>
+                    <div class="theme" id="mint" style="background-color: #05385b;" onclick="setMintTheme()">
                         <p style="color: #5cdb95;">MINT</p>
                         <div class="themeSamples">
+                            <!-- background colour -->
                             <div class="themeSample" style="background-color: #5cdb95;"></div>
+                            <!-- title colour -->
                             <div class="themeSample" style="background-color: #20688a;"></div>
-                            <div class="themeSample" style="background-color: #edf5e1;"></div>
+                            <!-- text colour -->
+                            <div class="themeSample" style="background-color: #edf5e1;"></div> 
                         </div>
                     </div>
                     <div class="theme" id="ez-mode" style="background-color: ;">
@@ -112,13 +113,13 @@
                             <div class="themeSample" style="background-color: ;"></div>
                         </div>
                     </div>
-                    <div class="theme" id="purple" style="background-color: ;">
+                    <div class="theme" id="wine" style="background-color: #3A1717;" onclick="setWineTheme()">
                         <div></div>
-                        <p style="color: ;">PURPLE</p>
+                        <p style="color: wine;">WINE</p>
                         <div class="themeSamples">
-                            <div class="themeSample" style="background-color: ;"></div>
-                            <div class="themeSample" style="background-color: ;"></div>
-                            <div class="themeSample" style="background-color: ;"></div>
+                            <div class="themeSample" style="background-color: #632D2D;"></div>
+                            <div class="themeSample" style="background-color: #8F4848;"></div>
+                            <div class="themeSample" style="background-color: white;"></div>
                         </div>
                     </div>
                     <div class="theme" id="green" style="background-color: ;">
