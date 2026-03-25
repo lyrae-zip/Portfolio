@@ -74,15 +74,26 @@
         <a href="https://www.credly.com/users/luna_miles" target="_blank" rel="noopener noreferrer" style="text-decoration: none;" class="certifications" id="certifications"><div >CERTIFICATIONS</div></a>
         <div class="resume" id="resume">View My Resume!</div>
 
-        <div class="projects" id="projects">PROJECTS</div>
-        <div class="maddysmachines" id="maddysmachines">
+        <div class="projects" id="projects" >PROJECTS</div>
+        <div class="maddysmachines project" id="maddysmachines">
             <p>MADDY'S MACHINES</p>
-
+            <hr>
+            <img src="../Images/maddysmachines-01.png">
         </div>
-        <div class="emberfall" id="emberfall">EMBERFALL</div>
-        <div class="spintegration" id="spintegration">SIMPLY PLURAL SYNC</div>
-        <div class="printer" id="printer">3D PRINTER REPAIR AND SETUP</div>
-        <div class="portfoliowebsite" id="portfoliowebsite">PORTFOLIO WEBSITE</div>
+        <div class="emberfall project" id="emberfall">
+            <p>EMBERFALL</p>       
+            <img src="../Images/EmberfallIcon.png">
+        </div>
+            
+        <div class="spintegration project" id="spintegration">
+            <p>SIMPLY PLURAL SYNC</p>
+            <img src="../Images/shortcuts.jpg">
+        </div>
+        <div class="printer project" id="printer">
+            <p>3D PRINTER REPAIR</p>
+            <img src="../Images/printer.png">
+        </div>
+        <div class="portfoliowebsite project" id="portfoliowebsite">PORTFOLIO WEBSITE</div>
     </div>
 
     <div class="modal" id="modal">
@@ -93,144 +104,105 @@
                 <h2>Change Theme</h2>
                 <hr>
                 <div class="themes">
-                    <div class="theme" id="mint" style="background-color: #05385b;" onclick="setMintTheme()">
-                        <p style="color: #5cdb95;">MINT</p>
+                    <div class="theme" id="mint" style="background-color: #5cdb95;" onclick="setMintTheme()">
+                        <p style="color: #05385b;">MINT</p>
                         <div class="themeSamples">
-                            <!-- background colour -->
-                            <div class="themeSample" style="background-color: #5cdb95;"></div>
-                            <!-- title colour -->
+                            <div class="themeSample" style="background-color: #05385b;"></div>
                             <div class="themeSample" style="background-color: #20688a;"></div>
-                            <!-- text colour -->
-                            <div class="themeSample" style="background-color: #edf5e1;"></div> 
+                            <div class="themeSample" style="background-color: #edf5e1;"></div>
                         </div>
                     </div>
-                    <div class="theme" id="ez-mode" style="background-color: ;">
-                        <div></div>
-                        <p style="color: ;">ez mode</p>
+
+                    <div class="theme" id="wine" style="background-color: #8F4848;" onclick="setWineTheme()">
+                        <p style="color: #3A1717;">WINE</p>
                         <div class="themeSamples">
-                            <div class="themeSample" style="background-color: ;"></div>
-                            <div class="themeSample" style="background-color: ;"></div>
-                            <div class="themeSample" style="background-color: ;"></div>
-                        </div>
-                    </div>
-                    <div class="theme" id="wine" style="background-color: #3A1717;" onclick="setWineTheme()">
-                        <div></div>
-                        <p style="color: wine;">WINE</p>
-                        <div class="themeSamples">
+                            <div class="themeSample" style="background-color: #3A1717;"></div>
                             <div class="themeSample" style="background-color: #632D2D;"></div>
-                            <div class="themeSample" style="background-color: #8F4848;"></div>
                             <div class="themeSample" style="background-color: white;"></div>
                         </div>
                     </div>
-                    <div class="theme" id="green" style="background-color: ;">
-                        <div></div>
-                        <p style="color: ;">GREEN</p>
+
+                    <div class="theme" id="ez-mode" style="background-color: #eeeeee;" onclick="setEzTheme()">
+                        <p style="color: #111111;">EZ MODE</p>
                         <div class="themeSamples">
-                            <div class="themeSample" style="background-color: ;"></div>
-                            <div class="themeSample" style="background-color: ;"></div>
-                            <div class="themeSample" style="background-color: ;"></div>
+                            <div class="themeSample" style="background-color: #111111;"></div>
+                            <div class="themeSample" style="background-color: #888888;"></div>
+                            <div class="themeSample" style="background-color: #eeeeee;"></div>
                         </div>
                     </div>
-                    <div class="theme" id="miami" style="background-color: ;">
-                        <div></div>
-                        <p style="color: ;">MIAMI</p>
+
+                    <div class="theme" id="miami" style="background-color: #ff2e63;" onclick="setMiamiTheme()">
+                        <p style="color: #1a1a2e;">MIAMI</p>
                         <div class="themeSamples">
-                            <div class="themeSample" style="background-color: ;"></div>
-                            <div class="themeSample" style="background-color: ;"></div>
-                            <div class="themeSample" style="background-color: ;"></div>
+                            <div class="themeSample" style="background-color: #1a1a2e;"></div>
+                            <div class="themeSample" style="background-color: #08d9d6;"></div>
+                            <div class="themeSample" style="background-color: #eaeaea;"></div>
                         </div>
                     </div>
-                    <div class="theme" id="honey" style="background-color: ;">
-                        <div></div>
-                        <p style="color: ;">HONEY</p>
+
+                    <div class="theme" id="honey" style="background-color: #ffb703;" onclick="setHoneyTheme()">
+                        <p style="color: #2b1d0e;">HONEY</p>
                         <div class="themeSamples">
-                            <div class="themeSample" style="background-color: ;"></div>
-                            <div class="themeSample" style="background-color: ;"></div>
-                            <div class="themeSample" style="background-color: ;"></div>
+                            <div class="themeSample" style="background-color: #2b1d0e;"></div>
+                            <div class="themeSample" style="background-color: #fb8500;"></div>
+                            <div class="themeSample" style="background-color: #fff3b0;"></div>
                         </div>
                     </div>
-                    <div class="theme" id="sweden" style="background-color: ;">
-                        <div></div>
-                        <p style="color: ;">SWEDEN</p>
+
+                    <div class="theme" id="sweden" style="background-color: #ffcc00;" onclick="setSwedenTheme()">
+                        <p style="color: #002f6c;">SWEDEN</p>
                         <div class="themeSamples">
-                            <div class="themeSample" style="background-color: ;"></div>
-                            <div class="themeSample" style="background-color: ;"></div>
-                            <div class="themeSample" style="background-color: ;"></div>
+                            <div class="themeSample" style="background-color: #002f6c;"></div>
+                            <div class="themeSample" style="background-color: #0057b7;"></div>
+                            <div class="themeSample" style="background-color: #ffffff;"></div>
                         </div>
                     </div>
-                    <div class="theme" id="sewing-tin" style="background-color: ;">
-                        <div></div>
-                        <p style="color: ;">SEWING TIN</p>
+
+                    <div class="theme" id="sewing-tin" style="background-color: #d7263d;" onclick="setSewingTheme()">
+                        <p style="color: #2e2e2e;">SEWING TIN</p>
                         <div class="themeSamples">
-                            <div class="themeSample" style="background-color: ;"></div>
-                            <div class="themeSample" style="background-color: ;"></div>
-                            <div class="themeSample" style="background-color: ;"></div>
+                            <div class="themeSample" style="background-color: #2e2e2e;"></div>
+                            <div class="themeSample" style="background-color: #f46036;"></div>
+                            <div class="themeSample" style="background-color: #f7f7ff;"></div>
                         </div>
                     </div>
-                    <div class="theme" id="antihero" style="background-color: ;">
-                        <div></div>
-                        <p style="color: ;">ANTIHERO</p>
+
+                    <div class="theme" id="antihero" style="background-color: #e63946;" onclick="setAntiheroTheme()">
+                        <p style="color: #0f0f0f;">ANTIHERO</p>
                         <div class="themeSamples">
-                            <div class="themeSample" style="background-color: ;"></div>
-                            <div class="themeSample" style="background-color: ;"></div>
-                            <div class="themeSample" style="background-color: ;"></div>
+                            <div class="themeSample" style="background-color: #0f0f0f;"></div>
+                            <div class="themeSample" style="background-color: #457b9d;"></div>
+                            <div class="themeSample" style="background-color: #f1faee;"></div>
                         </div>
                     </div>
-                    <div class="theme" id="taro" style="background-color: ;">
-                        <div></div>
-                        <p style="color: ;">TARO</p>
+
+                    <div class="theme" id="taro" style="background-color: #cdb4db;" onclick="setTaroTheme()">
+                        <p style="color: #2b213a;">TARO</p>
                         <div class="themeSamples">
-                            <div class="themeSample" style="background-color: ;"></div>
-                            <div class="themeSample" style="background-color: ;"></div>
-                            <div class="themeSample" style="background-color: ;"></div>
+                            <div class="themeSample" style="background-color: #2b213a;"></div>
+                            <div class="themeSample" style="background-color: #b5838d;"></div>
+                            <div class="themeSample" style="background-color: #f5e6ff;"></div>
                         </div>
                     </div>
-                    <div class="theme" id="creamsicle" style="background-color: ;">
-                        <div></div>
-                        <p style="color: ;">CREAMSICLE</p>
+
+                    <div class="theme" id="creamsicle" style="background-color: #ff7f11;" onclick="setCreamsicleTheme()">
+                        <p style="color: #fff1e6;">CREAMSICLE</p>
                         <div class="themeSamples">
-                            <div class="themeSample" style="background-color: ;"></div>
-                            <div class="themeSample" style="background-color: ;"></div>
-                            <div class="themeSample" style="background-color: ;"></div>
+                            <div class="themeSample" style="background-color: #fff1e6;"></div>
+                            <div class="themeSample" style="background-color: #ffb703;"></div>
+                            <div class="themeSample" style="background-color: #3a0ca3;"></div>
                         </div>
                     </div>
-                    <div class="theme" id="matcha-mocha" style="background-color: ;">
-                        <div></div>
-                        <p style="color: ;">MATCHA MOCHA</p>
+
+                    <div class="theme" id="matcha-mocha" style="background-color: #a3b18a;" onclick="setMatchaTheme()">
+                        <p style="color: #2d1e1e;">MATCHA MOCHA</p>
                         <div class="themeSamples">
-                            <div class="themeSample" style="background-color: ;"></div>
-                            <div class="themeSample" style="background-color: ;"></div>
-                            <div class="themeSample" style="background-color: ;"></div>
+                            <div class="themeSample" style="background-color: #2d1e1e;"></div>
+                            <div class="themeSample" style="background-color: #6f4e37;"></div>
+                            <div class="themeSample" style="background-color: #fefae0;"></div>
                         </div>
                     </div>
-                    <div class="theme" id="solorized-light" style="background-color: ;">
-                        <div></div>
-                        <p style="color: ;">SOLARIZED LIGHT</p>
-                        <div class="themeSamples">
-                            <div class="themeSample" style="background-color: ;"></div>
-                            <div class="themeSample" style="background-color: ;"></div>
-                            <div class="themeSample" style="background-color: ;"></div>
-                        </div>
-                    </div>
-                    <div class="theme" id="osaka" style="background-color: ;">
-                        <div></div>
-                        <p style="color: ;">OSAKA</p>
-                        <div class="themeSamples">
-                            <div class="themeSample" style="background-color: ;"></div>
-                            <div class="themeSample" style="background-color: ;"></div>
-                            <div class="themeSample" style="background-color: ;"></div>
-                        </div>
-                    </div>
-                    <div class="theme" id="passionfruit" style="background-color: ;">
-                        <div></div>
-                        <p style="color: ;">PASSION FRUIT</p>
-                        <div class="themeSamples">
-                            <div class="themeSample" style="background-color: ;"></div>
-                            <div class="themeSample" style="background-color: ;"></div>
-                            <div class="themeSample" style="background-color: ;"></div>
-                        </div>
-                    </div>
-                </div>
+                </div> 
             </div>
 
             <div id="learnmoreModal">
