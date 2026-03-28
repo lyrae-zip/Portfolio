@@ -318,6 +318,10 @@ button:hover {
   text-decoration: none;
   cursor: pointer;
 }
+
+br {
+    margin-bottom: 20px;
+}
 /**************************************/
 
 /*THEMES*/
@@ -338,6 +342,8 @@ button:hover {
     justify-content: center; 
     height: 40px; 
     overflow: hidden; 
+    transition: transform 0.2s ease-in-out;
+
 }
 
 .theme p {
@@ -360,6 +366,7 @@ button:hover {
     cursor: pointer;
     z-index:4;
     border: 2px solid var(--textColor);
+    transition: transform 0.2s ease-in-out;
 }
 
 .theme:hover .themeSamples {

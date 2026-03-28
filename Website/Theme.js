@@ -38,9 +38,9 @@ function setEzTheme() {
 
 var miami = document.getElementById("miami");
 function setMiamiTheme() {
-    var miamiTitle = "#1a1a2e";
-    var miamiGrid = "#08d9d6";
-    var miamiBackground = "#ff2e63";
+    var miamiGrid = "#ff2e63";
+    var miamiTitle = "#08d9d6";
+    var miamiBackground = "#1a1a2e";
     var miamiText = "#eaeaea";
     root.style.setProperty("--titleColor", miamiTitle);
     root.style.setProperty("--gridColor", miamiGrid);
@@ -62,9 +62,9 @@ function setHoneyTheme() {
 
 var sweden = document.getElementById("sweden");
 function setSwedenTheme() {
-    var swedenTitle = "#002f6c";
+    var swedenTitle = "#ffcc00";
     var swedenGrid = "#0057b7";
-    var swedenBackground = "#ffcc00";
+    var swedenBackground = "#002f6c";
     var swedenText = "#ffffff";
     root.style.setProperty("--titleColor", swedenTitle);
     root.style.setProperty("--gridColor", swedenGrid);
