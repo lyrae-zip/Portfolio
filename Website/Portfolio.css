@@ -123,6 +123,7 @@ button:hover {
     overflow-y: hidden;
     background-color: var(--titleColor);
     transition: background-color 0.2s ease-in-out;
+    scale: 102%
 }
 
 .navbar {
@@ -169,12 +170,6 @@ button:hover {
     align-items: center;
 }
 
-.aboutme{
-    display: flex;
-    align-items: center;
-}
-
-
 .project{  
     display: flex;
     flex-direction: column;
@@ -191,6 +186,24 @@ button:hover {
     text-align: center;
 }
 
+
+.bigAboutMe{
+    display: grid;
+    gap: 30px;
+
+    grid-template-areas: 
+    "aboutText1      aboutimg1"
+    "aboutText2      aboutimg2";
+
+}
+.bigAboutMe > .aboutText1  {grid-area: aboutText1}
+.bigAboutMe > .aboutimg1   {grid-area: aboutimg1} 
+.bigAboutMe > .aboutText2  {grid-area: aboutText2}
+.bigAboutMe > .aboutimg2   {grid-area: aboutimg2}
+
+.bigAboutMe div{
+    border: 1px solid white
+}
 
 
 /* MODAL STYLES */
@@ -318,6 +331,10 @@ button:hover {
   text-decoration: none;
   cursor: pointer;
 }
+
+br {
+    margin-bottom: 20px;
+}
 /**************************************/
 
 /*THEMES*/
@@ -338,6 +355,8 @@ button:hover {
     justify-content: center; 
     height: 40px; 
     overflow: hidden; 
+    transition: transform 0.2s ease-in-out;
+
 }
 
 .theme p {
@@ -360,6 +379,7 @@ button:hover {
     cursor: pointer;
     z-index:4;
     border: 2px solid var(--textColor);
+    transition: transform 0.2s ease-in-out;
 }
 
 .theme:hover .themeSamples {
