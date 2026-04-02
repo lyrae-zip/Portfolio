@@ -9,6 +9,7 @@ var spintegration = document.getElementById("spintegration");
 var printer = document.getElementById("printer");
 var portfoliowebsite = document.getElementById("portfoliowebsite");
 var learnmore = document.getElementById("learnmore");
+var computerBuild = document.getElementById("computerBuild");
 
 var themepicker = document.getElementById("themepicker");
 var themepickerModal = document.getElementById("themepickerModal");
@@ -21,6 +22,7 @@ var printerModal = document.getElementById("printerModal");
 var portfoliowebsiteModal = document.getElementById("portfoliowebsiteModal");
 var learnmoreModal = document.getElementById("learnmoreModal");
 var cookies = document.getElementById("cookies");
+var compuerBuildModal = document.getElementById("computerBuildModal");
 
 
 var animationDuration = 250;
@@ -51,6 +53,7 @@ function showModalFor(element) {
     portfoliowebsiteModal.style.display = "none";
     learnmoreModal.style.display = "none";
     themepickerModal.style.display = "none";
+    computerBuildModal.style.display = "none";
     cookies.style.display = "none";
 
     switch (element.id) {
@@ -78,6 +81,9 @@ function showModalFor(element) {
         case "themepicker":
             themepickerModal.style.display = "block";
             break;
+        case "computerBuild":
+            computerBuildModal.style.display = "block";
+            break;
         case "cookies":
             cookies.style.display = "flex";
             break;
@@ -94,6 +100,7 @@ printer.onclick = function() { showModalFor(this); };
 portfoliowebsite.onclick = function() { showModalFor(this); };
 learnmore.onclick = function() { showModalFor(this); };
 themepicker.onclick = function() { showModalFor(this); };
+computerBuild.onclick = function() { showModalFor(this); };
 
 span.onclick = hideModal;
 

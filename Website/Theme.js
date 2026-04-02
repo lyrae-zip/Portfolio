@@ -61,4 +61,4 @@ function setTheme(event){
     if (document.cookie.includes("cookiesAccepted=true")) {
         document.cookie = "theme=" + event.currentTarget.id + "; max-age=31536000; path=/";
     }
-}
+} 
