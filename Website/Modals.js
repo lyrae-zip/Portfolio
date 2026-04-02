@@ -20,6 +20,8 @@ var spintegrationModal = document.getElementById("spintegrationModal");
 var printerModal = document.getElementById("printerModal");
 var portfoliowebsiteModal = document.getElementById("portfoliowebsiteModal");
 var learnmoreModal = document.getElementById("learnmoreModal");
+var cookies = document.getElementById("cookies");
+
 
 var animationDuration = 250;
 
@@ -49,6 +51,7 @@ function showModalFor(element) {
     portfoliowebsiteModal.style.display = "none";
     learnmoreModal.style.display = "none";
     themepickerModal.style.display = "none";
+    cookies.style.display = "none";
 
     switch (element.id) {
         case "learnmore":
@@ -74,6 +77,9 @@ function showModalFor(element) {
             break;
         case "themepicker":
             themepickerModal.style.display = "block";
+            break;
+        case "cookies":
+            cookies.style.display = "flex";
             break;
         default:
             break;

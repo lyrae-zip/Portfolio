@@ -1,8 +1,9 @@
 :root {
-    --titleColor: #3A1717;
-    --gridColor: #632D2D;
-    --backgroundColor: #8F4848;
-    --textColor: white;
+    --titleColor: #000;
+    --gridColor: #000;
+    --backgroundColor: #000;
+    --textColor: #000;
+    --imageFade: #000;
 
 }
 
@@ -156,7 +157,6 @@ button:hover {
 .grid > .selfie{
     background-color: transparent;
     padding: 0px;
-    background-image: url('../Images/Luna1.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -381,9 +381,20 @@ br {
     transform: scale(1.4);
     cursor: pointer;
     z-index:4;
-    border: 2px solid var(--textColor);
+    /* border: 2px solid var(--textColor); */
     transition: transform 0.2s ease-in-out;
 }
+
+.selectedTheme {
+    border: 2px solid var(--textColor);
+    transform: scale(1.4);
+    z-index: 4;
+    .themeSamples {
+        display: flex;
+    }
+}
+
+
 
 .theme:hover .themeSamples {
     display: flex;
@@ -397,3 +408,63 @@ br {
 }
 
 
+/** Switch **/
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: var(--titleColor);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px var(--titleColor);
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
