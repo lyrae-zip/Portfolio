@@ -562,9 +562,9 @@ function setFledglingTheme() {
 
 function setOnedarkTheme() {
     root.style.setProperty("--titleColor", "#61afef");
-    root.style.setProperty("--gridColor", "#eceff4");
-    root.style.setProperty("--backgroundColor", "#2f343f");
-    root.style.setProperty("--textColor", "#000000");
+    root.style.setProperty("--gridColor", "#2f343f");
+    root.style.setProperty("--backgroundColor", "#000000");
+    root.style.setProperty("--textColor", "#eceff4");
 }
 
 function setCopperTheme() {
