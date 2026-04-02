@@ -4,7 +4,7 @@ function load(){
 
     if (!document.cookie.includes("cookiesAccepted=true")) {
         showModalFor(document.getElementById("cookies"));
-        // Set a random color theme first
+
         num = Math.random(document.getElementsByClassName("theme").length);
         num = Math.floor(num * document.getElementsByClassName("theme").length);
         setTheme({currentTarget: document.getElementsByClassName("theme")[num]});

@@ -30,6 +30,7 @@ html{
       "knowhow          knowhow        knowhow       knowhow"
       "python           python         java          java"
       "lua              lua            web           web"
+      "solidworks       solidworks     .             ."
       ; 
 }
 
@@ -43,6 +44,7 @@ html{
 .grid > .java                 { grid-area: java; }
 .grid > .lua                  { grid-area: lua; }
 .grid > .web                  { grid-area: web; }
+.grid > .solidworks           { grid-area: solidworks; }
 
 .grid > .educationCerts       { grid-area: educationCerts; }
 .grid > .certifications       { grid-area: certifications; }
@@ -71,7 +73,7 @@ body{
     transition: background-color 0.2s ease-in-out, border 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 
-.grid > *:hover:not(.selfie, .header, .knowhow, .educationCerts, .projects, .nameplate, .aboutme, .funStuff, .python, .java, .lua, .web){
+.grid > *:hover:not(.selfie, .header, .knowhow, .educationCerts, .projects, .nameplate, .aboutme, .funStuff, .python, .java, .lua, .web, .solidworks){
     transform: scale(1.02);
     transition: transform 0.2s ease-in-out;
     cursor: pointer;
@@ -124,7 +126,7 @@ button:hover {
     overflow-y: hidden;
     background-color: var(--titleColor);
     transition: background-color 0.2s ease-in-out;
-    scale: 102%
+    scale: 102%;
 }
 
 .navbar {
@@ -190,23 +192,6 @@ button:hover {
 }
 
 
-.bigAboutMe{
-    display: grid;
-    gap: 30px;
-
-    grid-template-areas: 
-    "aboutText1      aboutimg1"
-    "aboutText2      aboutimg2";
-
-}
-.bigAboutMe > .aboutText1  {grid-area: aboutText1}
-.bigAboutMe > .aboutimg1   {grid-area: aboutimg1} 
-.bigAboutMe > .aboutText2  {grid-area: aboutText2}
-.bigAboutMe > .aboutimg2   {grid-area: aboutimg2}
-
-.bigAboutMe div{
-    border: 1px solid white
-}
 
 
 /* MODAL STYLES */
@@ -250,6 +235,13 @@ button:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.modalDescription.profile {
+    display: grid;
+    flex-direction: unset;
+    justify-content: unset;
+    align-items: unset;
 }
 
 .modalDescription * {
@@ -390,9 +382,10 @@ br {
     border: 2px solid var(--textColor);
     transform: scale(1.4);
     z-index: 4;
-    .themeSamples {
-        display: flex;
-    }
+}
+
+.selectedTheme .themeSamples {
+    display: flex;
 }
 
 
@@ -466,6 +459,33 @@ input:checked + .slider:before {
   border-radius: 34px;
 }
 
+
+.profile {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    grid-template-areas: 
+        "p1 img"
+        "p2 img"
+        "img2 p3"
+        "p4 p4";
+}
+
+.profile * {
+    border: 1px solid white;
+}
+
+.profile > .p1 { grid-area: p1;}
+.profile > .p2 { grid-area: p2;}
+.profile > .p3 { grid-area: p3;}
+.profile > .p4 { grid-area: p4;}
+.profile > .profileimg {grid-area: img;}
+.profile > .profileimg2 {grid-area: img2;}
+
+
+
 .slider.round:before {
   border-radius: 50%;
 }
+
+
