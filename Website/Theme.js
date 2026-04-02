@@ -2,14 +2,21 @@ var root = document.querySelector(":root");
 
 function load(){
 
-    if (document.cookie.includes("cookiesAccepted=true")) {
+    if (!document.cookie.includes("cookiesAccepted=true")) {
         showModalFor(document.getElementById("cookies"));
-        let theme = document.cookie.split("; ").find(row => row.startsWith("theme="));
-        setTheme({currentTarget: document.getElementById(theme.split("=")[1])});
-    } else {
+        // Set a random color theme first
         num = Math.random(document.getElementsByClassName("theme").length);
         num = Math.floor(num * document.getElementsByClassName("theme").length);
         setTheme({currentTarget: document.getElementsByClassName("theme")[num]});
+    } else {
+        let theme = document.cookie.split("; ").find(row => row.startsWith("theme="));
+        if (theme) {
+            setTheme({currentTarget: document.getElementById(theme.split("=")[1])});
+        } else {
+            num = Math.random(document.getElementsByClassName("theme").length);
+            num = Math.floor(num * document.getElementsByClassName("theme").length);
+            setTheme({currentTarget: document.getElementsByClassName("theme")[num]});
+        }
     }
 
     root.style.setProperty("--imageFade", "rgba(0, 0, 0, 0.0)");
@@ -37,7 +44,6 @@ function setTheme(event){
 
     const colours = event.currentTarget.querySelectorAll(".themeSample");
     
-    // Fade out the image overlay
     const imageFade = document.querySelector(".selfie > div");
     if (imageFade) {
         imageFade.style.opacity = "0";
@@ -54,6 +60,5 @@ function setTheme(event){
 
     if (document.cookie.includes("cookiesAccepted=true")) {
         document.cookie = "theme=" + event.currentTarget.id + "; max-age=31536000; path=/";
-        alert("woofed");
     }
 }

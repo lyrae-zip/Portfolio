@@ -36,7 +36,7 @@ html{
 .grid > .nameplate            { grid-area: nameplate; }
 .grid > .selfie               { grid-area: selfie; }
 .grid > .aboutme              { grid-area: aboutme; }
-.grid > .learnmore            { grid-area: learnmore; cursor: pointer; }
+.grid > .learnmore            { grid-area: learnmore; }
 
 .grid > .knowhow              { grid-area: knowhow; }
 .grid > .python               { grid-area: python; }
@@ -45,8 +45,8 @@ html{
 .grid > .web                  { grid-area: web; }
 
 .grid > .educationCerts       { grid-area: educationCerts; }
-.grid > .certifications       { grid-area: certifications; cursor: pointer; }
-.grid > .resume               { grid-area: resume; cursor: pointer;}
+.grid > .certifications       { grid-area: certifications; }
+.grid > .resume               { grid-area: resume; }
 
 .grid > .projects             { grid-area: projects; }
 .grid > .maddysmachines       { grid-area: maddysmachines; }
@@ -71,10 +71,10 @@ body{
     transition: background-color 0.2s ease-in-out, border 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 
-.grid > *:hover:not(.selfie, .header, .knowhow, .educationCerts, .projects, .nameplate, .aboutme, .funStuff){
-    border: 3px solid var(--textColor);
+.grid > *:hover:not(.selfie, .header, .knowhow, .educationCerts, .projects, .nameplate, .aboutme, .funStuff, .python, .java, .lua, .web){
     transform: scale(1.02);
     transition: transform 0.2s ease-in-out;
+    cursor: pointer;
 }
 
 button {
@@ -156,6 +156,7 @@ button:hover {
 
 .grid > .selfie{
     background-color: transparent;
+    background-image: url(../Images/Luna1.png);
     padding: 0px;
     background-size: cover;
     background-position: center;
