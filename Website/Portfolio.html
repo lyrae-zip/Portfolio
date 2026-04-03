@@ -64,7 +64,8 @@
             <h2>JAVA</h2>
             <ul>
                 <li>Learned Java in my Computer Science class.</li>
-                <li>Have made multiple small projects in java, including a few android apps.</li>
+                <li>Have made multiple small projects in java</li>
+                <li>Used Scenebuilder and FXML for GUI development</li>
             </ul>
         </div>
         <div class="lua" id="lua">
@@ -86,7 +87,14 @@
             <ul>
                 <li>Took a course in Solidworks during my junior year.</li>
             </ul>
-        </div>             
+        </div>  
+        <div class="soldering" id="soldering">
+            <h2>SOLDERING</h2>
+            <ul>
+                <li>Learned how to solder in my Hardware and Software Technician pathway.</li>
+                <li>Proficient in both Through-Hole and Surface-Mount Soldering</li>
+            </ul>
+        </div>           
 
         <div class="educationCerts" id="education">EDUCATION, CERTIFICATIONS, AND RESUME</div>
         <a href="https://www.credly.com/users/luna_miles" target="_blank" rel="noopener noreferrer" style="text-decoration: none;" class="certifications" id="certifications"><div >CERTIFICATIONS</div></a>
@@ -112,11 +120,22 @@
             <img src="../Images/printer.png">
         </div>
         <div class="portfoliowebsite project" id="portfoliowebsite">
-            <p>PORTFOLIO WEBSITE</p>
+            <p style="z-index: 3;">PORTFOLIO WEBSITE</p>
+            <img src="../Images/behind.png" style="z-index: 1;">
+            <p style="
+            position: relative;
+            bottom: 50%;
+            z-index: 3;">BEHIND THE SCENES</p>
+            <div class="anglediv1"></div>
+            <div class="anglediv2"></div>
+
         </div>
         <div class="computerBuild project" id="computerBuild">
             <p>COMPUTER BUILD</p>
             <img src="../Images/Computer/PCondesk.jpg">
+        </div>
+        <div class="clickerGame project" id="clickerGame">
+            <p>CLICKER GAME</p>
         </div>
     </div>
 
@@ -304,7 +323,6 @@
                     <div class="theme" id="matrix" style="background-color: #000000; color: #15ff00;" onclick="setTheme(event)"><p>MATRIX</p><div class="themeSamples"><div class="themeSample" style="background-color: #15ff00;"></div><div class="themeSample" style="background-color: #006500;"></div><div class="themeSample" style="background-color: #d1ffcd;"></div></div></div>
                 </div>     
             </div>
-
             <div id="learnmoreModal">
                 <h2>MORE ABOUT ME</h2>
                 <hr>
@@ -312,9 +330,11 @@
                     <div class="p1">I am a student at Meridian Technical Charter High School studying the Hardware and Software technitian pathway. Im always looking for more ways to learn and get more experience in my field.</div>
                     <div class="p2"> I love to code and create projects just for the fun of it. I perfer coding in Lua, however I have the skills for most industry programming languages like Javascript or Python. I also have experience with
                         Solidworks design. I show interest in hardware as well, building my own personal computer, </div>
-                    <div class="p3">My love for both hardware and software has always been with me since I was young. Id love tearing into electronics to see what I could find or making silly scratch projects in my elementary years.
+                    <div class="p3">Im very involed and active in my community, School, and SkillsUSA. SkillsUSA is a national organization that allows students to develop their leadership and technical skills through both techincal and leadershipcompetitions
+                        Pictured to the left is myself with the rest of the Idaho SkillsUSA MTCHS delegates for the 2026 state competition. I competed in the Community Serivice Competition and got first place, Qualifying myself for the national comepetion in Atlanta, Georgia.
+                    </div>
+                    <div class="p4">My love for both hardware and software has always been with me since I was young. Id love tearing into electronics to see what I could find or making silly scratch projects in my elementary years.
                         This passion stuck with me, and I want to continue this mix of hardware and software.</div>
-                    <div class="p4">When Im not working on projects, I'm most likely out hanging out with my friends or family. I also love to play video games and solve rubiks cubes. Feel free to check out my work!</div>
                     <img class="profileimg" src="../Images/lunachicago.png">
                     <img class="profileimg2" src="../Images/delegates.png">
                 </div>
@@ -331,7 +351,7 @@
                         <img src="../Icons/ComputerCraft.png">
                         <img src="../Icons/Lua.png">
                         <img src="../Icons/GoogleSheets.png">
-                        <img src="../Icons/Javascrebipt.png">
+                        <img src="../Icons/appsScript.png">
                     </div>
                 </div>
                 <hr>
@@ -432,12 +452,20 @@
                     <h2>PORTFOLIO WEBSITE</h2>
                     <div class="headerIcons">
                         <img src="../Icons/HTML.png">
+                        <img src="../Icons/CSS.png" style="scale: 80%;">
                         <img src="../Icons/Javascript.png">
                     </div>
                 </div>
                 <hr>
                 <div class="modalDescription">
-                    <p>🛠️UNDER CONSTRUCTION🛠️</p>
+                    <p>The website youre looking at is a Portfolio website so show all of my work, as well as a place to show off my skills in a more interactable way. 
+                        This website was made entirely from scratch with raw HTML, CSS, and Javascript. The website has a theme system, with over 170 different themes.
+                        A large majority of the themes have been pulled from the Monkeytype website. With a couple of the themes designed by me.
+                    </p>
+                    <p>Ive worked on this website for months, probably my most developed and maintained project. It definitely increased my understanding of HTML, CSS, 
+                        and Javascript. The theme system was a fun challenge to work on. I learned about how to use CSS variables and changing them with javascript, 
+                        adding and manipulating cookies to save the theme.
+                    </p>
                     <a href="https://github.com/lyrae-zip/portfolio" target="_blank" rel="noopener noreferrer"><button>View on GitHub</button></a>
                 </div>
             </div>
@@ -455,7 +483,7 @@
                     all for only $75, almost too good to be true. The parts were old, but usable. The items in the kit were:
                 </p>
                     <div class="computerflex">
-                        <ul>
+                        <ul style="width: 50%;">
                             <li style="font-size: 1.3em;">CPU: AMD Ryzen 5 1600X</li>
                             <li style="font-size: 1.3em;">GPU: Gigabyte GeForce GTX 1050 Ti</li>
                             <li style="font-size: 1.3em;">Motherboard: ASRock X370 Killer SLI/sc</li>
@@ -476,10 +504,27 @@
                     <img src="../Images/Computer/PCondesk.jpg" class="computerimage">
                     <img src="../Images/Computer/PCDone.jpg" class="computerimage">
                 </div>
+                <p>
+                    Since the the original build in 2024. Ive upgraded the PC a coupe times. Ive upgraded the GPU, First a used RTX 2026, then an Nvidia Quadro RTX 4000. 
+                    The CPU has been upgraded once to an AMD Ryzen 7 5800XT. 
+                </p>
                 </div>
-                
             </div>
+            <div id="clickerGameModal">
+                <div class="modalHeader">
+                    <h2>CLICKER GAME</h2>
+                    <div class="headerIcons">
+                        <img src="../Icons/Java.png">
+                        <img src="../Icons/FXML.png">
+                        <img src="../Icons/CSS.png">                        
+                    </div>
+                </div>
+                <hr>
+                <div class="modalDescription">
+                    <p>splat</p>
 
+                </div>
+            </div>
 
             <div id="cookies" style="display: flex; flex-direction: column; gap: 10px; align-items: center;">
                 <div class="modalHeader">
@@ -496,11 +541,7 @@
                 </div>
                 <button onclick="proceed()"> Proceed</button>
             </div>
-
-
         </div>
     </div>
-
-
 </body>
 </html>

@@ -22,7 +22,8 @@ var printerModal = document.getElementById("printerModal");
 var portfoliowebsiteModal = document.getElementById("portfoliowebsiteModal");
 var learnmoreModal = document.getElementById("learnmoreModal");
 var cookies = document.getElementById("cookies");
-var compuerBuildModal = document.getElementById("computerBuildModal");
+var computerBuildModal = document.getElementById("computerBuildModal");
+var clickerGameModal = document.getElementById("clickerGameModal");
 
 
 var animationDuration = 250;
@@ -54,6 +55,7 @@ function showModalFor(element) {
     learnmoreModal.style.display = "none";
     themepickerModal.style.display = "none";
     computerBuildModal.style.display = "none";
+    clickerGameModal.style.display = "none";
     cookies.style.display = "none";
 
     switch (element.id) {
@@ -84,6 +86,9 @@ function showModalFor(element) {
         case "computerBuild":
             computerBuildModal.style.display = "block";
             break;
+        case "clickerGame":
+            clickerGameModal.style.display = "block";
+            break;
         case "cookies":
             cookies.style.display = "flex";
             break;
@@ -101,6 +106,7 @@ portfoliowebsite.onclick = function() { showModalFor(this); };
 learnmore.onclick = function() { showModalFor(this); };
 themepicker.onclick = function() { showModalFor(this); };
 computerBuild.onclick = function() { showModalFor(this); };
+clickerGame.onclick = function() { showModalFor(this); };
 
 span.onclick = hideModal;
 
