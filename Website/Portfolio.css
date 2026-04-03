@@ -160,6 +160,8 @@ button:hover {
     cursor: pointer;
 }
 
+/* --------------------------- */
+
 .grid > .selfie{
     background-color: transparent;
     background-image: url(../Images/Luna1.png);
@@ -170,7 +172,7 @@ button:hover {
 }
 
 .nameplate{
-    font-family: 'Climate Crisis', cursive;
+    font-family: 'Climate Crisis';
     font-size: 3em;
     font-weight: 200;
     letter-spacing: 0.05em;
@@ -193,6 +195,24 @@ button:hover {
 .project p {
     font-size: 0.8em;
     text-align: center;
+}
+
+.embrimage{
+    position: absolute;
+    top: 80px;
+    transition: transform 0.3s ease-in-out;
+    transform: rotate(0deg);  
+    transform-origin: 50% 200%;
+}
+.emberfall:hover{
+    #dragon{
+        transform: rotate(11deg);
+        
+    };
+    #werewolf{
+        transform: rotate(-11deg);
+
+    }
 }
 
 .anglediv1, .anglediv2 {
@@ -224,7 +244,6 @@ button:hover {
 }
 
 
-
 /* MODAL STYLES */
 .modal, .themepicker {
     display: none;
@@ -247,7 +266,7 @@ button:hover {
     padding: 40px;
     width: 60%;
     border-radius: 20px;
-    font-family: 'Special Gothic Expanded One', cursive;
+    font-family: 'Special Gothic Expanded One';
     color: var(--textColor);
     animation-duration: 0.25s;
     animation-fill-mode: forwards;
@@ -258,7 +277,9 @@ button:hover {
 }
 
 .modalContent p {
-    font-size: 1.5em;
+    font-size: 1.6em;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 900;
 }
 
 .modalDescription {
@@ -307,7 +328,7 @@ button:hover {
 .modalContent.fade-out { animation-name: fadeOutModalContent; }
 
 .modalContent > div > h2 {
-    font-family: 'Climate Crisis', cursive;
+    font-family: 'Climate Crisis';
     font-weight: 200;
     letter-spacing: 0.05em;
     font-size: 3em;
@@ -325,7 +346,7 @@ button:hover {
 }
 
 .modalHeader > h2 {
-    font-family: 'Climate Crisis', cursive;
+    font-family: 'Climate Crisis';
     font-weight: 200;
     letter-spacing: 0.05em;
     font-size: 2.5em;

@@ -28,7 +28,7 @@
                 <a href="#top">ABOUT</a>
                 <a href="#education">RESUME</a>
                 <a href="#projects">PROJECTS</a>
-                <a href="#knowhow">KNOW HOW</a>
+                <a href="#knowhow">SKILLS</a>
             </div>
         </div>
     </div>
@@ -47,12 +47,12 @@
         </div>
         <div class="nameplate" id="nameplate">HI, IM LUNA</div>
         <div class="aboutme">
-            My name is Luna Miles. and I am a junior at Meridian Technical Charter High School. Ive always loved computers and programming and my eagerness to learn and code relects that. I absolutely adore working with people and I want to share my expereince with you.
+            <p>My name is Luna Miles. and I am a junior at Meridian Technical Charter High School. Ive always loved computers and programming and my eagerness to learn and code relects that. I absolutely adore working with people and I want to share my expereince with you.</p>
         </div>
         <div class="learnmore" id="learnmore">
             <h2>MORE ABOUT ME</h2>
         </div>
-        <div class="knowhow" id="knowhow">KNOW HOW</div>
+        <div class="knowhow" id="knowhow">SKILLS</div>
         <div class="python" id="python">
             <h2>PYTHON</h2>
             <ul>
@@ -108,7 +108,10 @@
         </div>
         <div class="emberfall project" id="emberfall">
             <p>EMBERFALL</p>       
-            <img src="../Images/EmberfallIcon.png" style="scale: 120%;">
+            <img class="embrimage" id="dragon" src="../Images/embrfall/dragon.png">
+            <img class="embrimage" id="werewolf" src="../Images/embrfall/werewolf.png">
+            <img class="embrimage" src="../Images/embrfall/unicorn.png">
+            
         </div>
             
         <div class="spintegration project" id="spintegration">
@@ -327,20 +330,25 @@
                 <h2>MORE ABOUT ME</h2>
                 <hr>
                 <div class="modalDescription profile">
-                    <div class="p1">I am a student at Meridian Technical Charter High School studying the Hardware and Software technitian pathway. Im always looking for more ways to learn and get more experience in my field.</div>
-                    <div class="p2"> I love to code and create projects just for the fun of it. I perfer coding in Lua, however I have the skills for most industry programming languages like Javascript or Python. I also have experience with
-                        Solidworks design. I show interest in hardware as well, building my own personal computer, </div>
-                    <div class="p3">Im very involed and active in my community, School, and SkillsUSA. SkillsUSA is a national organization that allows students to develop their leadership and technical skills through both techincal and leadershipcompetitions
-                        Pictured to the left is myself with the rest of the Idaho SkillsUSA MTCHS delegates for the 2026 state competition. I competed in the Community Serivice Competition and got first place, Qualifying myself for the national comepetion in Atlanta, Georgia.
+                    <div class="p1"><p style="font-size: 1.2em;">I am a student at Meridian Technical Charter High School studying the Hardware and Software technitian pathway. Im always looking for more ways to learn and get more experience in my field.</p></div>
+                    <div class="p2"><p style="font-size: 1.2em;">I love to code and create projects just for the fun of it. I perfer coding in Lua, however I have the skills for most industry programming languages like Javascript or Python. I also have experience with
+                        Solidworks design. I show interest in hardware as well, building my own personal computer. </p> </div>
+                    <div class="p3"><p style="font-size: 1.2em;">Im very involed and active in my community, School, and SkillsUSA. SkillsUSA is a national organization that allows students to develop their leadership and technical skills through both techincal and leadershipcompetitions
+                        Pictured to the left is myself with the rest of the Idaho SkillsUSA MTCHS delegates for the 2026 state competition. I competed in the Community Serivce Competition and got first place, Qualifying myself for the national comepetion in Atlanta, Georgia. </p>
                     </div>
-                    <div class="p4">My love for both hardware and software has always been with me since I was young. Id love tearing into electronics to see what I could find or making silly scratch projects in my elementary years.
-                        This passion stuck with me, and I want to continue this mix of hardware and software.</div>
+                    <div class="p4"><p style="font-size: 1.2em;">My love for both hardware and software has always been with me since I was young. Id love tearing into electronics to see what I could find or making silly scratch projects in my elementary years.
+                        This passion stuck with me, and I want to continue this mix of hardware and software.</p></div>
                     <img class="profileimg" src="../Images/lunachicago.png">
                     <img class="profileimg2" src="../Images/delegates.png">
                 </div>
             </div>
             <div id="resumeModal">
-                <h2>RESUME</h2>
+                <div class="modalHeader">
+                    <h2>RESUME</h2>
+                    <div class="headerIcons">
+                        <a href="../Luna Resume.pdf" target="_blank" rel="noopener noreferrer" style="scale: calc(89%);"><button>Open PDF</button></a>
+                    </div>
+                </div>
                 <hr>
                 <iframe src="../Luna Resume.pdf" width="100%" height="1500px"></iframe>
             </div>
@@ -373,7 +381,7 @@
                         for better organization. I currently have about 600 unique items in my system, and 70000 total items and I have not noticed
                         performance issues. This project was the first project that utilized Lua, and is actually what I learned lua specfically for.
                     </p>
-                    <img src="../Images/Spreadsheet.png" alt="Maddy's Machines Spreadsheet">
+                    <img src="../Images/spreadsheet.png" alt="Maddy's Machines Spreadsheet">
                     <a href="https://docs.google.com/spreadsheets/d/13X4d9vAVCGdzr0-a78UpetSO_I-EmeEJkNhSfuNz9so/edit?usp=sharing" target="_blank" rel="noopener noreferrer"><button>View the Spreadsheet</button></a>
                 </div>
 
@@ -390,16 +398,16 @@
                 <div class="modalDescription">
                     <p>
                         Emberfall is an Indev content mod for the viral card game Balatro. I am working this mod
-                        in collaboration with my partner. I am the developver of the mod, He is the artist of the mod.
+                        in collaboration with my partner. I am the developper of the mod, He is the artist of the mod.
                         This mod aims to add new mechanics, cards, and new ways to play the game.
                     </p>
-                    <img src="../Images/EmberfallContent.png">
+                    <img src="../Images/EmberfallContent.png" style="border-radius: 30px;">
                     <a href="https://github.com/lyrae-zip/Emberfall" target="_blank" rel="noopener noreferrer"><button>View on GitHub</button></a>
                 </div>
             </div>
             <div id="spintegrationModal">
                 <div class="modalHeader">
-                    <h2>SIMPLY PLURAL SYNC</h2>
+                    <h2>SIMPLY SYNCED</h2>
                     <div class="headerIcons">
                         <img src="../Icons/Apparyllis.png">
                         <img src="../Icons/Shortcuts.png">
@@ -412,22 +420,28 @@
                    It tracks time spent in front per alter, however it requires the user to go into the app and regiser the swap 
                    Somebody I knew with this disorder wanted an easier way to interact with the website. they wanted to
                    automate this process, as they already had it set up with the Focus Mode customization on their iPhone.
-                   <br>
+                </p>
+                <br>
+                <p>
+
                    I took it upon myself to devlelop a system to automatically sync the swaps of the Focus Mode to simply plural,
                    so that the user did not have to enter Simply Plural for it to track.
-                   <br>
+                </p>
+                   <div style="display: flex;">
+                       <img src="../Images/SP1.png" style="width:50%; border-radius: 30px">
+                       <img src="../Images/SP2.png" style="width:50%; border-radius: 30px">
+                   </div>
+                <p>
                    This program interacts with the Simply Plural API through the iOS shortcuts app in a complex way, pushing
                    the limits of the restrictive nature of iOS and Shortcuts. I had to install a dependency app, Actions, to 
                    gain access to things like Global variables that could be accessed from multiple different shortcuts. 
-                   <br>
+                </p>
+                <br>   
+                <p>
                    Unfortunately, The original service is shutting down indefinitely. The person I knew got to use the program
                    in full for a few months, thankfully. My future plans for this project was to make it fully public, and 
                    develop an installer shortcut for an easy way for setup. 
                 </p>
-                <div style="display: flex;">
-                    <img src="../Images/SP1.png" style="width:50%">
-                    <img src="../Images/SP2.png" style="width:50%">
-                </div>
             </div>
             <div id="printerModal">
                 <div class="modalHeader">
@@ -521,7 +535,13 @@
                 </div>
                 <hr>
                 <div class="modalDescription">
-                    <p>splat</p>
+                    <p>This was a project I did for class. My computer science teacher told us to make a clicker game using Java. That was the only requirement.</p>
+                    <p>For mine, I made it themed around making sticky notes. For this, I used a graphics library that was not used by the rest of my classmates,
+                        and not taught in class; FXML. 
+                    </p>
+                    <p>I decided to use FXML because I had access to the SceneBuilder application and CSS styling. Scenebuilder lets me design Java applications 
+7                        using a GUI, instead of Java Swing, which I always found confusing.
+                    </p>
 
                 </div>
             </div>
