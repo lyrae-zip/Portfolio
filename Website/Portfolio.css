@@ -130,6 +130,7 @@ button:hover {
     background-color: var(--titleColor);
     transition: background-color 0.2s ease-in-out;
     scale: 102%;
+    z-index: 100;
 }
 
 .navbar {
@@ -181,7 +182,6 @@ button:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
     cursor: pointer;
     position: relative;
 }
@@ -204,7 +204,7 @@ button:hover {
     z-index: 2;
     border-radius: 20px;
     top: 0;
-    transition: clip-path 0.3s ease-in-out;
+    transition: background-color 0.2s ease-in-out, clip-path 0.3s ease-in-out ;
 
 }
 .anglediv1{
