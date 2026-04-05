@@ -34,6 +34,10 @@ function removeSelected() {
     for(let i = 0; i < document.getElementsByClassName("theme").length; i++) {
         document.getElementsByClassName("theme")[i].classList.remove("selectedTheme");
     }
+    const allItems = document.querySelectorAll("*");
+    allItems.forEach(item => {
+        item.classList.remove("butterdog");
+    });
 }
 
 function setTheme(event){
@@ -62,3 +66,18 @@ function setTheme(event){
         document.cookie = "theme=" + event.currentTarget.id + "; max-age=31536000; path=/";
     }
 } 
+
+function setbutterdog(){
+    removeSelected();
+
+    const imageFade = document.querySelector(".selfie > div");
+    if (imageFade) {
+        imageFade.style.opacity = "0";
+    }
+
+    const allItems = document.querySelectorAll("*");
+    allItems.forEach(item => {
+        item.classList.add("butterdog");
+    });
+} 
+

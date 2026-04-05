@@ -7,6 +7,8 @@
 
 }
 
+
+
 html, .grid{
     scroll-behavior: smooth !important;
 }
@@ -74,12 +76,19 @@ body{
     font-family: 'Special Gothic Expanded One', cursive;
     border: 3px solid transparent;
     transition: background-color 0.2s ease-in-out, border 0.2s ease-in-out, transform 0.2s ease-in-out;
+    /* background-image: url(../Icons/butterdog.png);
+    background-size: cover;
+    background-position: center; */
+
 }
 
 .grid > *:hover:not(.selfie, .header, .knowhow, .educationCerts, .projects, .nameplate, .aboutme, .funStuff, .python, .java, .lua, .web, .solidworks){
     transform: scale(1.02);
     transition: transform 0.2s ease-in-out;
     cursor: pointer;
+    /* background-image: url(../Icons/butterdog.png);
+    background-size: cover;
+    background-position: center; */
 }
 
 button {
@@ -158,6 +167,7 @@ button:hover {
     transform: scale(1.1);
     transition: transform 0.2s ease-in-out;
     cursor: pointer;
+    
 }
 
 /* --------------------------- */
@@ -455,15 +465,17 @@ br {
 .theme:hover {
     transform: scale(1.4);
     cursor: pointer;
-    z-index:4;
+    z-index:3;
     /* border: 2px solid var(--textColor); */
     transition: transform 0.2s ease-in-out;
+
 }
 
 .selectedTheme {
-    border: 2px solid var(--textColor);
-    transform: scale(1.4);
-    z-index: 4;
+    border: 2px solid var(--textColor);    
+    transform: scale(1.2);
+
+    z-index: 2;
 }
 
 .selectedTheme .themeSamples {
@@ -578,4 +590,21 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
+}
+
+/* *{
+    background-image: url(../Icons/butterdog.png);
+    background-size: cover;
+    background-position: center;
+} */
+
+.butterdog{
+    background-image: url(../Icons/butterdog.png);
+    background-size: cover;
+    background-position: center;
+}
+.butterdogtheme{
+    background-image: url(../Icons/butterdog.png);
+    background-size: cover;
+    background-position: center;
 }
