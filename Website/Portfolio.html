@@ -20,7 +20,7 @@
     <script src="Theme.js" defer></script>
 </head>
 <body onload="load()">
-    <div class="header">
+    <div class="header noHover">
         <div class="navbar"> 
             <a>LUNA MILES</a>
             <a id="themepicker">THEME </a>
@@ -34,7 +34,7 @@
     </div>
 
     <div class="grid">
-        <div class="selfie">
+        <div class="selfie noHover">
             <div style="
             position:absolute;
             top: 0;
@@ -45,22 +45,22 @@
             transition: background-color 0.2s ease-in-out;
             pointer-events: none;"></div>
         </div>
-        <div class="nameplate" id="nameplate">HI, IM LUNA</div>
-        <div class="aboutme">
+        <div class="nameplate noHover" id="nameplate">HI, IM LUNA</div>
+        <div class="aboutme noHover">
             <p>My name is Luna Miles. and I am a junior at Meridian Technical Charter High School. Ive always loved computers and programming and my eagerness to learn and code relects that. I absolutely adore working with people and I want to share my expereince with you.</p>
         </div>
         <div class="learnmore" id="learnmore">
             <h2>MORE ABOUT ME</h2>
         </div>
-        <div class="knowhow" id="knowhow">SKILLS</div>
-        <div class="python" id="python">
+        <div class="knowhow noHover" id="knowhow">SKILLS</div>
+        <div class="python noHover" id="python">
             <h2>PYTHON</h2>
             <ul>
                 <li>Tinkered with Python for two years.</li>
                 <li>I have high experience in the Manim python animation library.</li>
             </ul>
         </div>
-        <div class="java" id="java">
+        <div class="java noHover" id="java">
             <h2>JAVA</h2>
             <ul>
                 <li>Learned Java in my Computer Science class.</li>
@@ -68,21 +68,21 @@
                 <li>Used Scenebuilder and FXML for GUI development</li>
             </ul>
         </div>
-        <div class="lua" id="lua">
+        <div class="lua noHover" id="lua">
             <h2>LUA</h2>
             <ul>
                 <li>Learned Lua for use in ComputerCraft.</li>
                 <li>I am continuing to use Lua for a large Balatro content mod</li>
             </ul>
         </div>
-        <div class="web" id="web">
+        <div class="web noHover" id="web">
             <h2>WEB</h2>
             <ul>
                 <li>Learned HTML, CSS, and JavaScript for web development.</li>
                 <li>The website youre looking at was built with my own skills</li>
             </ul>
         </div>
-        <div class="solidworks" id="solidworks">
+        <div class="solidworks noHover" id="solidworks">
             <h2>SOLIDWORKS</h2>
             <ul>
                 <li>Took a course in Solidworks during my junior year.</li>
@@ -96,24 +96,23 @@
             </ul>
         </div>           
 
-        <div class="educationCerts" id="education">EDUCATION, CERTIFICATIONS, AND RESUME</div>
+        <div class="educationCerts noHover" id="education">EDUCATION, CERTIFICATIONS, AND RESUME</div>
         <a href="https://www.credly.com/users/luna_miles" target="_blank" rel="noopener noreferrer" style="text-decoration: none;" class="certifications" id="certifications"><div >CERTIFICATIONS</div></a>
         <div class="resume" id="resume">View My Resume!</div>
 
-        <div class="projects" id="projects" >PROJECTS</div>
+        <div class="projects noHover" id="projects" >PROJECTS</div>
         <div class="maddysmachines project" id="maddysmachines">
             <p>MADDY'S MACHINES</p>
             <hr>
             <img src="../Images/maddysmachines-01.png">
         </div>
         <div class="emberfall project" id="emberfall">
-            <p>EMBERFALL</p>       
-            <img class="embrimage" id="dragon" src="../Images/embrfall/dragon.png">
-            <img class="embrimage" src="../Images/embrfall/unicorn.png">
-            <img class="embrimage" id="werewolf" src="../Images/embrfall/werewolf.png">
-            <!-- <img class="embrimage" id="dragon" src="../Icons/butterdog.png">
-            <img class="embrimage" src="../Icons/butterdog.png">
-            <img class="embrimage" id="werewolf" src="../Icons/butterdog.png"> -->
+            <p>EMBERFALL</p>  
+            <div class="embrimages">     
+                <img class="embrimage" id="dragon" src="../Images/embrfall/dragon.png">
+                <img class="embrimage" src="../Images/embrfall/unicorn.png">
+                <img class="embrimage" id="werewolf" src="../Images/embrfall/werewolf.png">
+            </div>
         </div>
             
         <div class="spintegration project" id="spintegration">
@@ -141,6 +140,7 @@
         </div>
         <div class="clickerGame project" id="clickerGame">
             <p>CLICKER GAME</p>
+            <img src="../Images/straightclickingit.png" style="height: auto;">
         </div>
     </div>
 
@@ -544,8 +544,9 @@
                         and not taught in class; FXML. 
                     </p>
                     <p>I decided to use FXML because I had access to the SceneBuilder application and CSS styling. Scenebuilder lets me design Java applications 
-7                        using a GUI, instead of Java Swing, which I always found confusing.
+                        using a GUI, instead of Java Swing, which I always found confusing.
                     </p>
+                    <img src="../Images/straightclickingit.png">
 
                 </div>
             </div>

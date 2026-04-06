@@ -19,7 +19,6 @@ html, .grid{
     margin: 40px;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     margin-top: 170px;
-
     grid-template-areas:
       "nameplate        nameplate      selfie        selfie"
       "aboutme          aboutme        selfie        selfie"
@@ -82,7 +81,7 @@ body{
 
 }
 
-.grid > *:hover:not(.selfie, .header, .knowhow, .educationCerts, .projects, .nameplate, .aboutme, .funStuff, .python, .java, .lua, .web, .solidworks){
+.grid > *:hover:not(.noHover){
     transform: scale(1.02);
     transition: transform 0.2s ease-in-out;
     cursor: pointer;
@@ -90,6 +89,29 @@ body{
     background-size: cover;
     background-position: center; */
 }
+
+
+@keyframes float {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-20px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
+}
+.project:hover {
+    img, .embrimages {
+        transform: translateY(20px);
+	    animation: float 6s ease-in-out infinite;
+    }
+}
+
+
+
+
 
 button {
     background-color: var(--titleColor);
@@ -210,7 +232,7 @@ button:hover {
 .embrimage{
     position: absolute;
     top: 80px;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.2s ease-out;
     transform: rotate(0deg);  
     transform-origin: 50% 200%;
 }
@@ -222,7 +244,7 @@ button:hover {
     #werewolf{
         transform: rotate(-11deg);
 
-    }
+    };
 }
 
 .anglediv1, .anglediv2 {
