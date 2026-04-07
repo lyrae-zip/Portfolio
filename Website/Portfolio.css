@@ -15,16 +15,15 @@ html, .grid{
 
 .grid{
     display: grid;
-    gap: 40px;
-    margin: 40px;
+    gap: 48px;
+    margin: 48px;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    margin-top: 170px;
+    margin-top: 204px;
     grid-template-areas:
       "nameplate        nameplate      selfie        selfie"
       "aboutme          aboutme        selfie        selfie"
       "learnmore        learnmore      selfie        selfie"
-      "educationCerts   educationCerts educationCerts educationCerts"
-      "certifications   certifications resume        resume"
+      "certifications    resume         selfie        selfie"
       "projects         projects       projects      projects"
       "maddysmachines   emberfall      spintegration printer"
       "portfoliowebsite computerBuild  clickerGame   ."
@@ -48,7 +47,6 @@ html, .grid{
 .grid > .solidworks           { grid-area: solidworks; }
 .grid > .soldering             { grid-area: soldering; }
 
-.grid > .educationCerts       { grid-area: educationCerts; }
 .grid > .certifications       { grid-area: certifications; }
 .grid > .resume               { grid-area: resume; }
 
@@ -69,9 +67,9 @@ body{
 .grid > *, .header{
     color: var(--textColor);
     background-color: var(--gridColor);
-    border-radius: 30px;
-    padding:40px;
-    font-size: 2em;
+    border-radius: 36px;
+    padding:48px;
+    font-size: 2.4em;
     font-family: 'Special Gothic Expanded One', cursive;
     border: 3px solid transparent;
     transition: background-color 0.2s ease-in-out, border 0.2s ease-in-out, transform 0.2s ease-in-out;
@@ -90,25 +88,36 @@ body{
     background-position: center; */
 }
 
+.embrimage{
+    position: absolute;
+    /* top: 80px; */
+    transition: transform 0.2s ease-out;
+    transform: translateX(-50%) rotate(0deg);  
+    transform-origin: 50% 200%;
+    left: 50%;
+}
+.emberfall:hover #dragon{
+    transform: translateX(-50%) rotate(11deg);
+}
+.emberfall:hover #werewolf{
+    transform: translateX(-50%) rotate(-11deg);
+}
 
 @keyframes float {
 	0% {
-		transform: translatey(0px);
+		transform: translateY(0px);
 	}
 	50% {
-		transform: translatey(-20px);
+		transform: translateY(-20px);
 	}
 	100% {
-		transform: translatey(0px);
+		transform: translateY(0px);
 	}
 }
-.project:hover {
-    img, .embrimages {
-        transform: translateY(20px);
-	    animation: float 6s ease-in-out infinite;
-    }
+.project:hover img:not(.embrimage),
+.project:hover .embrimages{
+    animation: float 3s ease-in-out infinite;
 }
-
 
 
 
@@ -116,11 +125,11 @@ body{
 button {
     background-color: var(--titleColor);
     color: var(--textColor);
-    padding: 10px 20px;
-    font-size: 2em;
+    padding: 12px 24px;
+    font-size: 2.4em;
     cursor: pointer;
     border: 2px solid rgba(255, 255, 255, 0);
-    border-radius: 15px;
+    border-radius: 18px;
     transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 
@@ -128,13 +137,13 @@ button:hover {
     color: var(--textColor);
     transform: scale(1.05);
     border: 2px solid var(--textColor);
-    border-radius: 15px;
+    border-radius: 18px;
     transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 
 .grid ol, .grid li {
-    padding-left: 20px;
-    font-size: 0.8em;
+    padding-left: 24px;
+    font-size: 0.96em;
 }
 
 .header, .knowhow, .educationCerts, .projects {
@@ -142,7 +151,7 @@ button:hover {
     font-family: 'Climate Crisis', cursive;
     font-weight: 200;
     letter-spacing: 0.05em;
-    font-size: 2em;
+    font-size: 2.4em;
 }
 
 /* NAVBAR STYLES */
@@ -150,12 +159,12 @@ button:hover {
     position: fixed;
     top: 0;
     z-index: 2;
-    height: 20px;
-    font-size: 1.5em;
-    margin: 40px;
+    height: 24px;
+    font-size: 1.8em;
+    margin: 48px;
     display: flex;
     flex-direction: row;
-    width: calc(100% - 80px);
+    width: calc(100% - 96px);
     border: 3px solid var(--textColor);
     overflow-y: hidden;
     background-color: var(--titleColor);
@@ -205,7 +214,7 @@ button:hover {
 
 .nameplate{
     font-family: 'Climate Crisis';
-    font-size: 3em;
+    font-size: 3.6em;
     font-weight: 200;
     letter-spacing: 0.05em;
     display: flex;
@@ -220,32 +229,16 @@ button:hover {
     position: relative;
 }
 .project img {
-    height:313px;
-    margin-top: 20px;
-    border-radius: 15px;
+    height:376px;
+    margin-top: 24px;
+    border-radius: 18px;
 }
 .project p {
-    font-size: 0.8em;
+    font-size: 0.96em;
     text-align: center;
 }
 
-.embrimage{
-    position: absolute;
-    top: 80px;
-    transition: transform 0.2s ease-out;
-    transform: rotate(0deg);  
-    transform-origin: 50% 200%;
-}
-.emberfall:hover{
-    #dragon{
-        transform: rotate(11deg);
-        
-    };
-    #werewolf{
-        transform: rotate(-11deg);
 
-    };
-}
 
 .anglediv1, .anglediv2 {
     background-color: var(--gridColor);
@@ -254,7 +247,7 @@ button:hover {
     width: 100%;
     height: 100%;
     z-index: 2;
-    border-radius: 20px;
+    border-radius: 24px;
     top: 0;
     transition: background-color 0.2s ease-in-out, clip-path 0.3s ease-in-out ;
 
@@ -281,7 +274,7 @@ button:hover {
     display: none;
     position: fixed; 
     z-index: 1000;
-    padding-top: 100px; 
+    padding-top: 120px; 
     left: 0;
     top: 0;
     width: 100%; 
@@ -295,9 +288,9 @@ button:hover {
 .modalContent {
     background-color: var(--gridColor);
     margin: auto;
-    padding: 40px;
+    padding: 48px;
     width: 60%;
-    border-radius: 20px;
+    border-radius: 24px;
     font-family: 'Special Gothic Expanded One';
     color: var(--textColor);
     animation-duration: 0.25s;
@@ -309,7 +302,7 @@ button:hover {
 }
 
 .modalContent p {
-    font-size: 1.6em;
+    font-size: 1.92em;
     font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: 900;
 }
@@ -331,7 +324,7 @@ button:hover {
 
 
 .modalDescription * {
-    margin: 20px 0px;
+    margin: 24px 0px;
 }
 
 @keyframes fadeInModalBackground {
@@ -363,7 +356,7 @@ button:hover {
     font-family: 'Climate Crisis';
     font-weight: 200;
     letter-spacing: 0.05em;
-    font-size: 3em;
+    font-size: 3.6em;
 }
 
 .modalContent > div > hr {
@@ -381,28 +374,28 @@ button:hover {
     font-family: 'Climate Crisis';
     font-weight: 200;
     letter-spacing: 0.05em;
-    font-size: 2.5em;
+    font-size: 3em;
 }
 
 .modalHeader > div {
     display: flex;
-    gap: 20px;
+    gap: 24px;
     justify-content: flex-start;
     align-items: flex-start;
     overflow: hidden;
     height: 100%;
-    margin-right: 20px;
+    margin-right: 24px;
 }
 
 .modalHeader > div > img {
-    height: 70px;
+    height: 84px;
     width: auto;
 }
 
 .close {
   color: #aaaaaa;
   float: right;
-  font-size: 28px;
+  font-size: 34px;
   font-weight: bold;
 }
 
@@ -425,9 +418,9 @@ br {
 
 #computerBuildModal li {
     background: var(--backgroundColor);
-    padding: 20px;
-    border-radius: 20px;
-    font-size: 1.2em;
+    padding: 24px;
+    border-radius: 24px;
+    font-size: 1.44em;
 }
 
 .computerflex{
@@ -439,8 +432,8 @@ br {
     width: 50%; 
     height: auto;
     object-fit: contain; 
-    padding: 10px; 
-    border-radius: 30px;
+    padding: 12px; 
+    border-radius: 36px;
 }
 
 
@@ -450,19 +443,19 @@ br {
 .themes{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    gap: 8px;
+    gap: 10px;
 
 }
 .theme {
     position: relative;
-    padding: 8px;
-    font-size: 0.6em;
-    border-radius: 8px;
+    padding: 10px;
+    font-size: 0.72em;
+    border-radius: 10px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center; 
-    height: 40px; 
+    height: 48px; 
     overflow: hidden; 
     cursor: pointer;
     transition: transform 0.2s ease-in-out;
@@ -481,7 +474,7 @@ br {
     right: 0;
     top: 0;
     bottom: 0;
-    width: 20px; 
+    width: 24px; 
 }
 
 .theme:hover {
@@ -522,8 +515,8 @@ br {
 .switch {
   position: relative;
   display: inline-block;
-  width: 60px;
-  height: 34px;
+  width: 72px;
+  height: 41px;
 }
 
 .switch input { 
@@ -547,10 +540,10 @@ br {
 .slider:before {
   position: absolute;
   content: "";
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
+  height: 31px;
+  width: 31px;
+  left: 5px;
+  bottom: 5px;
   background-color: white;
   -webkit-transition: .4s;
   transition: .4s;
@@ -565,26 +558,26 @@ input:focus + .slider {
 }
 
 input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
+  -webkit-transform: translateX(31px);
+  -ms-transform: translateX(31px);
+  transform: translateX(31px);
 }
 
 /* Rounded sliders */
 .slider.round {
-  border-radius: 34px;
+  border-radius: 41px;
 }
 
 
 .profile {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    gap: 24px;
     grid-template-areas: 
         "p1 img"
         "p2 img"
+        "p4 img"
         "img2 p3"
-        "p4 p4";
 }
 
 .profile * {
@@ -593,8 +586,8 @@ input:checked + .slider:before {
 .profile > div {
     /* border: 1px solid white; */
     background-color: var(--backgroundColor);
-    padding: 20px;
-    font-size: 1.3em;
+    padding: 24px;
+    font-size: 1.56em;
     margin: 0px 0px;
     
     display: flex;
@@ -629,4 +622,420 @@ input:checked + .slider:before {
     background-image: url(../Icons/butterdog.png);
     background-size: cover;
     background-position: center;
+}
+
+/* MEDIA QUERIES */
+
+/* 1440p Desktop */
+@media (min-width: 1440px) {
+    .grid {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+@media (min-width: 1080) and (min-width:880){
+
+}
+
+/* Tablet — NEW, add this block */
+@media (max-width: 880px) and (min-width: 480px) {
+    /* 2-column grid */
+    .grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "nameplate        nameplate"
+            "selfie           selfie"
+            "aboutme          aboutme"
+            "learnmore        learnmore"
+            "certifications   resume"
+            "projects         projects"
+            "maddysmachines   emberfall"
+            "spintegration    printer"
+            "portfoliowebsite computerBuild"
+            "clickerGame      ."
+            "knowhow          knowhow"
+            "python           python"
+            "java             java"
+            "lua              lua"
+            "web              web"
+            "solidworks       solidworks"
+            "soldering        soldering";
+    }
+
+    .grid > *, .header {
+        border-radius: 20px;
+        padding: 28px;
+        font-size: 1.4em;
+    }
+
+    .header {
+        position: fixed;
+        top: 0;
+        height: 80px;
+        font-size: 1em;
+        margin: 0;
+        padding: 12px 24px;
+        width: 100%;
+        border: none;
+        border-radius: 0;
+        box-sizing: border-box;
+        scale: 1;
+        z-index: 100;
+        overflow: visible;
+    }
+
+    .navRight {
+        display: none;
+    }
+
+    .navbar > a:first-child {
+        display: block;
+    }
+
+    /* projects stay as compact rows */
+    .project {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        max-height: unset;
+        gap: 12px;
+    }
+
+    .project img {
+        height: 140px;
+        width: 100%;
+        object-fit: cover;
+        margin-top: 8px;
+        border-radius: 12px;
+    }
+
+    .project p {
+        font-size: 0.8em;
+        text-align: center;
+        margin: 0;
+    }
+
+    .selfie { height: 300px; }
+
+    .nameplate { font-size: 2.4em; }
+
+    .header, .knowhow, .educationCerts, .projects {
+        font-size: 1.6em;
+    }
+
+    .behindthescenes, .anglediv1, .anglediv2 { display: none; }
+
+    .embrimage {
+        position: static;
+        transform: none;
+        left: unset;
+        height: 80px;
+        width: 80px;
+        object-fit: contain;
+    }
+
+    .embrimages { display: contents; }
+    .emberfall #dragon,
+    .emberfall #werewolf { display: none; }
+
+    .modalContent {
+        position: fixed;
+        top: 0; left: 0; right: 0; bottom: 0;
+        width: 100%; height: 100%;
+        margin: 0; padding: 0;
+        border-radius: 0;
+        display: flex;
+        flex-direction: column;
+        overflow-y: auto;
+    }
+
+    .modal { padding-top: 0; }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .grid {
+        gap: 24px;
+        margin: 24px;
+        margin-top: 120px;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "nameplate"
+            "selfie"
+            "aboutme"
+            "learnmore"
+            "certifications"
+            "resume"
+            "educationCerts"
+            "projects"
+            "maddysmachines"
+            "emberfall"
+            "spintegration"
+            "printer"
+            "portfoliowebsite"
+            "computerBuild"
+            "clickerGame"
+            "knowhow"
+            "python"
+            "java"
+            "lua"
+            "web"
+            "solidworks"
+            "soldering";
+    }
+    
+    .grid > *, .header {
+        border-radius: 16px;
+        padding: 24px;
+        font-size: 1.2em;
+    }
+    
+    .header {
+        position: fixed;
+        top: 0;
+        height: 80px;
+        font-size: 1.2em;
+        margin: 0;
+        padding: 12px 24px;
+        width: calc(100% - 48px);
+        border: none;
+        border-radius: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        scale: 1;
+        z-index: 100;
+        overflow: visible;
+        background-color: var(--titleColor);
+        color: var(--textColor);
+    }
+    
+    .navbar {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: space-between;
+        color: var(--textColor);
+    }
+    
+    .navRight #themepicker {
+        color: var(--textColor);
+        cursor: pointer;
+    }
+    
+    .selfie{
+        height:400px
+    }
+
+    .behindthescenes, .anglediv1, .anglediv2{
+        display: none
+    }
+
+    .embrimage {
+        position: static;
+        transform: none;
+        left: unset;
+        height: 50px;
+        width: 50px;
+        object-fit: contain;
+        flex-shrink: 0;
+    }
+
+    .embrimages {
+        display: contents;
+    }
+
+    .emberfall #dragon,
+    .emberfall #werewolf {
+        display: none;
+    }
+            
+
+    
+    .project {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        cursor: pointer;
+        position: relative;
+        max-height: 120px;
+        gap: 12px;
+    }
+    
+    .project img {
+        height: 50px;
+        width: 50px;
+        margin-top: 0;
+        border-radius: 10px;
+        flex-shrink: 0;
+    }
+    
+    .project p {
+        font-size: 0.7em;
+        text-align: left;
+        flex-grow: 1;
+        margin: 0;
+    }
+    
+    .nameplate {
+        font-size: 2em;
+    }
+    
+    .header, .knowhow, .educationCerts, .projects {
+        font-size: 1.6em;
+    }
+    
+    .header {
+        margin: 0;
+        width: 100%;
+        border-radius: 0;
+        scale: 1;
+        border: none;
+        box-sizing: border-box;
+        font-size: 1em;
+    }
+
+    /* hide the three nav links but keep name + theme picker */
+    .navRight {
+        display: none;
+    }
+
+    .navbar > a:first-child {
+        display: block;
+    }
+
+    button {
+        padding: 8px 16px;
+        font-size: 1.2em;
+        border-radius: 12px;
+    }
+    
+    .modalContent {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        border-radius: 0;
+        display: flex;
+        flex-direction: column;
+        overflow-y: auto;
+    }
+    
+    .modalContent > div:first-child {
+        position: sticky;
+        top: 0;
+        background-color: var(--gridColor);
+        z-index: 1001;
+        border-bottom: 2px solid var(--textColor);
+        padding: 24px;
+    }
+    
+    .modalContent > div:not(:first-child) {
+        padding: 24px;
+        overflow-y: auto;
+    }
+    
+    .modalHeader {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .modalHeader > h2 {
+        font-size: 1.8em;
+    }
+    
+    .modalHeader > div > img {
+        height: 50px;
+    }
+    
+    .close {
+        font-size: 24px;
+        margin: 20px;
+        color:var(--textColor);
+        scale: calc(120%)
+    }
+    
+    .modal {
+        padding-top: 0;
+    }
+    
+    .modal, .themepicker {
+        background-color: rgba(0, 0, 0, 0.9);
+    }
+    
+    .profile {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        grid-template-areas:
+            "p1"
+            "p2"
+            "p3"
+            "p4"
+            "img"
+            "img2";
+    }
+    
+    .profile > div {
+        padding: 16px;
+        font-size: 1em;
+    }
+    
+    .grid ol, .grid li {
+        padding-left: 16px;
+        font-size: 0.8em;
+    }
+    
+    #computerBuildModal li {
+        padding: 16px;
+        border-radius: 12px;
+        font-size: 1em;
+    }
+    
+    .computerflex {
+        flex-direction: column;
+    }
+    
+    .computerimage {
+        width: 100%;
+        padding: 8px;
+        border-radius: 16px;
+    }
+    
+    .theme {
+        padding: 6px;
+        font-size: 0.5em;
+        border-radius: 6px;
+        height: 32px;
+    }
+    
+    .themeSamples {
+        width: 16px;
+    }
+    
+    .switch {
+        width: 48px;
+        height: 27px;
+    }
+    
+    .slider:before {
+        height: 21px;
+        width: 21px;
+        left: 3px;
+        bottom: 3px;
+    }
+    
+    input:checked + .slider:before {
+        transform: translateX(21px);
+    }
+    
+    .slider.round {
+        border-radius: 27px;
+    }
 }
