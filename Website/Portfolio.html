@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="Portfolio.css">
     <script src="Modals.js" defer></script>
+    <script src="scroll.js" defer></script>
+    <!-- https://codepen.io/Adir-SL/pen/RNPEqPL -->
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -34,7 +36,7 @@
     </div>
 
     <div class="grid">
-        <div class="selfie noHover">
+        <div class="selfie noHover scrollDiv">
             <div style="
             position:absolute;
             top: 0;
@@ -45,24 +47,24 @@
             transition: background-color 0.2s ease-in-out;
             pointer-events: none;"></div>
         </div>
-        <a href="https://www.credly.com/users/luna_miles" target="_blank" rel="noopener noreferrer" style="text-decoration: none;" class="certifications" id="certifications"><div >CERTIFICATIONS</div></a>
-        <div class="resume" id="resume">View My Resume!</div>
-        <div class="nameplate noHover" id="nameplate">HI, IM LUNA</div>
-        <div class="aboutme noHover">
+        <a href="https://www.credly.com/users/luna_miles" target="_blank" rel="noopener noreferrer" style="text-decoration: none;" class="certifications scrollDiv" id="certifications"><div >CERTIFICATIONS</div></a>
+        <div class="resume scrollDiv" id="resume">View My Resume!</div>
+        <div class="nameplate noHover scrollDiv" id="nameplate">HI, IM LUNA</div>
+        <div class="aboutme noHover scrollDiv">
             <p>My name is Luna Miles. and I am a junior at Meridian Technical Charter High School. Ive always loved computers and programming and my eagerness to learn and code relects that. I absolutely adore working with people and I want to share my expereince with you.</p>
         </div>
-        <div class="learnmore" id="learnmore">
+        <div class="learnmore scrollDiv" id="learnmore">
             <h2>MORE ABOUT ME</h2>
         </div>
-        <div class="knowhow noHover" id="knowhow">SKILLS</div>
-        <div class="python noHover" id="python">
+        <div class="knowhow noHover scrollDiv" id="knowhow">SKILLS</div>
+        <div class="python noHover scrollDiv" id="python">
             <h2>PYTHON</h2>
             <ul>
                 <li>Tinkered with Python for two years.</li>
                 <li>I have high experience in the Manim python animation library.</li>
             </ul>
         </div>
-        <div class="java noHover" id="java">
+        <div class="java noHover scrollDiv" id="java">
             <h2>JAVA</h2>
             <ul>
                 <li>Learned Java in my Computer Science class.</li>
@@ -70,27 +72,27 @@
                 <li>Used Scenebuilder and FXML for GUI development</li>
             </ul>
         </div>
-        <div class="lua noHover" id="lua">
+        <div class="lua noHover scrollDiv" id="lua">
             <h2>LUA</h2>
             <ul>
                 <li>Learned Lua for use in ComputerCraft.</li>
                 <li>I am continuing to use Lua for a large Balatro content mod</li>
             </ul>
         </div>
-        <div class="web noHover" id="web">
+        <div class="web noHover scrollDiv" id="web">
             <h2>WEB</h2>
             <ul>
                 <li>Learned HTML, CSS, and JavaScript for web development.</li>
                 <li>The website youre looking at was built with my own skills</li>
             </ul>
         </div>
-        <div class="solidworks noHover" id="solidworks">
+        <div class="solidworks noHover scrollDiv" id="solidworks">
             <h2>SOLIDWORKS</h2>
             <ul>
                 <li>Took a course in Solidworks during my junior year.</li>
             </ul>
         </div>  
-        <div class="soldering noHover" id="soldering">
+        <div class="soldering noHover scrollDiv" id="soldering">
             <h2>SOLDERING</h2>
             <ul>
                 <li>Learned how to solder in my Hardware and Software Technician pathway.</li>
@@ -99,13 +101,13 @@
         </div>           
 
 
-        <div class="projects noHover" id="projects" >PROJECTS</div>
-        <div class="maddysmachines project" id="maddysmachines">
+        <div class="projects noHover scrollDiv" id="projects" >PROJECTS</div>
+        <div class="maddysmachines project scrollDiv" id="maddysmachines">
             <p>MADDY'S MACHINES</p>
             <img src="../Images/maddysmachines-01.png">
         </div>
 
-        <div class="emberfall project" id="emberfall">
+        <div class="emberfall project scrollDiv" id="emberfall">
             <p>EMBERFALL</p>  
             <div class="embrimages" style="
             width: 100%;
@@ -116,15 +118,15 @@
             </div>
         </div>
             
-        <div class="spintegration project" id="spintegration">
+        <div class="spintegration project scrollDiv" id="spintegration">
             <p>SIMPLY SYNCED</p>
             <img src="../Images/shortcuts.jpg">
         </div>
-        <div class="printer project" id="printer">
+        <div class="printer project scrollDiv" id="printer">
             <p>3D PRINTER REPAIR</p>
             <img src="../Images/printer.png">
         </div>
-        <div class="portfoliowebsite project" id="portfoliowebsite">
+        <div class="portfoliowebsite project scrollDiv" id="portfoliowebsite">
             <p style="z-index: 3;">PORTFOLIO WEBSITE</p>
             <img src="../Images/behind.png" style="z-index: 1;">
             <p style="
@@ -136,11 +138,11 @@
             <div class="anglediv2"></div>
 
         </div>
-        <div class="computerBuild project" id="computerBuild">
+        <div class="computerBuild project scrollDiv" id="computerBuild">
             <p>COMPUTER BUILD</p>
             <img src="../Images/Computer/PCondesk.jpg">
         </div>
-        <div class="clickerGame project" id="clickerGame">
+        <div class="clickerGame project scrollDiv" id="clickerGame">
             <p>CLICKER GAME</p>
             <img src="../Images/straightclickingit.png" style="height: auto;">
         </div>
@@ -276,7 +278,7 @@
                     <div class="theme" id="catppuccin" style="background-color: #1e1e2e; color: #cba6f7;" onclick="setTheme(event)"><p>CATPPUCCIN</p><div class="themeSamples"><div class="themeSample" style="background-color: #cba6f7;"></div><div class="themeSample" style="background-color: #7f849c;"></div><div class="themeSample" style="background-color: #cdd6f4;"></div></div></div>
                     <div class="theme" id="wavez" style="background-color: #1c292f; color: #6bde3b;" onclick="setTheme(event)"><p>WAVEZ</p><div class="themeSamples"><div class="themeSample" style="background-color: #6bde3b;"></div><div class="themeSample" style="background-color: #1f5e6b;"></div><div class="themeSample" style="background-color: #e9efe6;"></div></div></div>
                     <div class="theme" id="earthsong" style="background-color: #292521; color: #509452;" onclick="setTheme(event)"><p>EARTHSONG</p><div class="themeSamples"><div class="themeSample" style="background-color: #509452;"></div><div class="themeSample" style="background-color: #c98f25;"></div><div class="themeSample" style="background-color: #dddddd;"></div></div></div>  
-                    <div class="theme" id="BORDERLINE VIOLENCE" style="background-color: #0b0b0b; color: #00d2be; line-height: 14px;" onclick="setTheme(event)"><p>UNNECESSARY VIOLENCE</p><div class="themeSamples"><div class="themeSample" style="background-color: #00d2be;"></div><div class="themeSample" style="background-color: #c0c0c0;"></div><div class="themeSample" style="background-color: #ffffff;"></div></div></div>  
+                    <div class="theme" id="BORDERLINE VIOLENCE" style="background-color: #0b0b0b; color: #00d2be;" onclick="setTheme(event)"><p>UNNECESSARY VIOLENCE</p><div class="themeSamples"><div class="themeSample" style="background-color: #00d2be;"></div><div class="themeSample" style="background-color: #c0c0c0;"></div><div class="themeSample" style="background-color: #ffffff;"></div></div></div>  
                     <div class="theme" id="1704" style="background-color: #0c0c0c; color: #ff8000;" onclick="setTheme(event)"><p>1704</p><div class="themeSamples"><div class="themeSample" style="background-color: #ffffff;"></div><div class="themeSample" style="background-color: #ff8000;"></div><div class="themeSample" style="background-color: #000000"></div></div></div>
                     <div class="theme" id="monokai" style="background-color: #272822; color: #a6e22e;" onclick="setTheme(event)"><p>MONOKAI</p><div class="themeSamples"><div class="themeSample" style="background-color: #a6e22e;"></div><div class="themeSample" style="background-color: #e6db74;"></div><div class="themeSample" style="background-color: #000000;"></div></div></div>
                     <div class="theme" id="nautilus" style="background-color: #132237; color: #ebb723;" onclick="setTheme(event)"><p>NAUTILUS</p><div class="themeSamples"><div class="themeSample" style="background-color: #ebb723;"></div><div class="themeSample" style="background-color: #0b4c6c;"></div><div class="themeSample" style="background-color: #1cbaac;"></div></div></div>
@@ -314,7 +316,6 @@
                     <div class="theme" id="tron-orange" style="background-color: #0d1c1c; color: #f0e800;" onclick="setTheme(event)"><p>TRON ORANGE</p><div class="themeSamples"><div class="themeSample" style="background-color: #f0e800;"></div><div class="themeSample" style="background-color: #ff6600;"></div><div class="themeSample" style="background-color: #ffffff;"></div></div></div>
                     <div class="theme" id="aurora" style="background-color: #011926; color: #00e980;" onclick="setTheme(event)"><p>AURORA</p><div class="themeSamples"><div class="themeSample" style="background-color: #00e980;"></div><div class="themeSample" style="background-color: #245c69;"></div><div class="themeSample" style="background-color: #fff;"></div></div></div>
                     <div class="theme" id="spiderman" style="background-color: #0d1219; color: #e23636;" onclick="setTheme(event)"><p>SPIDERMAN</p><div class="themeSamples"><div class="themeSample" style="background-color: #e23636;"></div><div class="themeSample" style="background-color: #0476f2;"></div><div class="themeSample" style="background-color: #f0f0f0;"></div></div></div>
-                    <div class="theme" id="red-dragon" style="background-color: #1a0b0c; color: #ff3a32;" onclick="setTheme(event)"><p>RED DRAGON</p><div class="themeSamples"><div class="themeSample" style="background-color: #ff3a32;"></div><div class="themeSample" style="background-color: #e2a528;"></div><div class="themeSample" style="background-color: #ffffff;"></div></div></div>
                     <div class="theme" id="vesper" style="background-color: #101010; color: #ffc799;" onclick="setTheme(event)"><p>VESPER</p><div class="themeSamples"><div class="themeSample" style="background-color: #ffc799;"></div><div class="themeSample" style="background-color: #a0a0a0;"></div><div class="themeSample" style="background-color: #000000;"></div></div></div>
                     <div class="theme" id="voc" style="background-color: #190618; color: #e0caac;" onclick="setTheme(event)"><p>VOC</p><div class="themeSamples"><div class="themeSample" style="background-color: #e0caac;"></div><div class="themeSample" style="background-color: #4c1e48;"></div><div class="themeSample" style="background-color: #eeeae4;"></div></div></div>
                     <div class="theme" id="midnight" style="background-color: #0b0e13; color: #60759f;" onclick="setTheme(event)"><p>MIDNIGHT</p><div class="themeSamples"><div class="themeSample" style="background-color: #60759f;"></div><div class="themeSample" style="background-color: #394760;"></div><div class="themeSample" style="background-color: #9fadc6;"></div></div></div>
@@ -404,7 +405,7 @@
                 <div class="modalDescription">
                     <p>
                         Emberfall is an Indev content mod for the viral card game Balatro. I am working this mod
-                        in collaboration with my partner. I am the developper of the mod, He is the artist of the mod.
+                        in collaboration with my partner. I am the developer of the mod, He is the artist of the mod.
                         This mod aims to add new mechanics, cards, and new ways to play the game.
                     </p>
                     <img src="../Images/EmberfallContent.png" style="border-radius: 30px;">
@@ -422,8 +423,8 @@
                 </div>
                 <hr>
                 <p>
-                   Simply Plural is a service designed to help with dissasociation disorders like DID, OSDD, etc.
-                   It tracks time spent in front per alter, however it requires the user to go into the app and regiser the swap 
+                   Simply Plural is a service designed to help with dissociation disorders like DID, OSDD, etc.
+                   It tracks time spent in front per alter, however it requires the user to go into the app and register1`` the swap 
                    Somebody I knew with this disorder wanted an easier way to interact with the website. they wanted to
                    automate this process, as they already had it set up with the Focus Mode customization on their iPhone.
                 </p>
@@ -478,7 +479,7 @@
                 </div>
                 <hr>
                 <div class="modalDescription">
-                    <p>The website youre looking at is a Portfolio website so show all of my work, as well as a place to show off my skills in a more interactable way. 
+                    <p>The website youre looking at is a Portfolio website to show all of my work, as well as a place to show off my skills in a more interactable way. 
                         This website was made entirely from scratch with raw HTML, CSS, and Javascript. The website has a theme system, with over 170 different themes.
                         A large majority of the themes have been pulled from the Monkeytype website. With a couple of the themes designed by me.
                     </p>

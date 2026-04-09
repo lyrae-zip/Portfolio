@@ -442,10 +442,10 @@ br {
 /*THEMES*/
 .themes{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(5, 1fr);
     gap: 10px;
-
 }
+
 .theme {
     position: relative;
     padding: 10px;
@@ -465,6 +465,7 @@ br {
 .theme p {
     margin: 0;
     text-align: center;
+    line-height: 20px;
 }
 
 .themeSamples {
@@ -714,6 +715,12 @@ input:checked + .slider:before {
     }
 
     .nameplate { font-size: 3em; }
+
+    .themes {
+        grid-template-columns: repeat(3, 1fr);
+
+    }
+
 }
 
 
@@ -791,7 +798,7 @@ input:checked + .slider:before {
         margin: 0;
     }
 
-    .selfie { height: 300px; }
+    .selfie { height: 600px; }
     .nameplate { font-size: 2.4em; }
 
     .header, .knowhow, .educationCerts, .projects { font-size: 1.6em; }
