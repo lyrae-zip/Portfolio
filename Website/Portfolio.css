@@ -61,7 +61,7 @@ html, .grid{
 
 body{
     background: var(--backgroundColor);
-     background-attachment: fixed;
+      background-attachment: fixed;
     transition: background 0.2s ease-in-out;
 }
 
@@ -201,6 +201,8 @@ button:hover {
     cursor: pointer;
     
 }
+
+
 
 /* --------------------------- */
 
@@ -353,12 +355,7 @@ button:hover {
 .modalContent.fade-in { animation-name: fadeInModalContent; }
 .modalContent.fade-out { animation-name: fadeOutModalContent; }
 
-.modalContent > div > h2 {
-    font-family: 'Climate Crisis';
-    font-weight: 200;
-    letter-spacing: 0.05em;
-    font-size: 3.6em;
-}
+
 
 .modalContent > div > hr {
     border: 1px solid var(--textColor);
@@ -375,7 +372,8 @@ button:hover {
     font-family: 'Climate Crisis';
     font-weight: 200;
     letter-spacing: 0.05em;
-    font-size: 3em;
+    font-size:3em ;
+
 }
 
 .modalHeader > div {
@@ -385,13 +383,18 @@ button:hover {
     align-items: flex-start;
     overflow: hidden;
     height: 100%;
-    margin-right: 24px;
 }
 
 .modalHeader > div > img {
     height: 84px;
     width: auto;
 }
+
+.modalHeader > h2, .headerIcons{
+    min-width: 0;
+}
+
+
 
 .close {
   color: #aaaaaa;
@@ -587,7 +590,7 @@ input:checked + .slider:before {
 }
 .profile > div {
     /* border: 1px solid white; */
-    background-color: var(--backgroundColor);
+    background: var(--backgroundColor);
     padding: 24px;
     font-size: 1.56em;
     margin: 0px 0px;
@@ -627,9 +630,7 @@ input:checked + .slider:before {
 }
 
 
-
-
-@media (min-width: 1650px) {
+@media (min-width: 1950px) {
     .grid {
         gap: 48px;
         margin: 48px;
@@ -673,7 +674,7 @@ input:checked + .slider:before {
 }
 
 
-@media (max-width: 1649px) and (min-width: 1200px) {
+@media (max-width: 1949px) and (min-width: 1300px) {
     .grid {
         gap: 40px;
         margin: 40px;
@@ -725,7 +726,7 @@ input:checked + .slider:before {
 }
 
 
-@media (max-width: 1199px) and (min-width: 480px) {
+@media (max-width: 1299px) and (min-width: 760px) {
     .grid {
         gap: 24px;
         margin: 24px;
@@ -835,7 +836,7 @@ input:checked + .slider:before {
 
 
 /* 1 COLUMN — mobile */
-@media (max-width: 479px) {
+@media (max-width: 759px) {
     .grid {
         gap: 24px;
         margin: 24px;
@@ -912,6 +913,8 @@ input:checked + .slider:before {
     .selfie { height: 400px; }
 
     .behindthescenes, .anglediv1, .anglediv2 { display: none; }
+
+    .headerIcons { display: none; }
 
     .embrimage {
         position: static;
