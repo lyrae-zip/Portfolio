@@ -40,6 +40,7 @@ function hideModal() {
     modal.classList.add("fade-out");
     modalContent.classList.remove("fade-in");
     modalContent.classList.add("fade-out");
+    modal.scrollTop = 20;
 
     setTimeout(function() {
         modal.style.display = "none";

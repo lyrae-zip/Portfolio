@@ -227,7 +227,6 @@ button:hover {
     display: flex;
     align-items: center;
 }
-
 .project{  
     display: flex;
     flex-direction: column;
@@ -634,8 +633,26 @@ input:checked + .slider:before {
     background-position: center;
 }
 
+.footer{
+    width:100%;
+    height: 200px;
+    background-color: var(--titleColor);
+    color: var(--textColor);
+    font-family: 'Special Gothic Expanded One';
+    text-align: center;
 
-@media (min-width: 1950px) {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+.footer a{
+    text-decoration: none;
+    color: var(--textColor);
+}
+
+
+@media (min-width: 1800px) {
     .grid {
         gap: 48px;
         margin: 48px;
@@ -677,10 +694,15 @@ input:checked + .slider:before {
     }
 
     .nameplate { font-size: 3.6em; }
+
+    .mobile {
+        display: none;
+    }
+
 }
 
 
-@media (max-width: 1949px) and (min-width: 1300px) {
+@media (max-width: 1799px) and (min-width: 1300px) {
     .grid {
         gap: 40px;
         margin: 40px;
@@ -695,8 +717,8 @@ input:checked + .slider:before {
             "projects         projects       projects projects projects projects"
             "maddysmachines maddysmachines   emberfall emberfall      spintegration spintegration"
             "printer printer          portfoliowebsite portfoliowebsite computerBuild computerBuild"
-            "clickerGame clickerGame      buildings buildings .             ."
-            "manim manim consord consord . ."
+            "clickerGame clickerGame      buildings buildings manim manim"
+            "consord consord . . . ."
             "knowhow knowhow knowhow knowhow          knowhow        knowhow"
             "python python python          java java java          "
             "lua lua lua web web web              "
@@ -730,6 +752,10 @@ input:checked + .slider:before {
 
     }
 
+    .mobile {
+        display: none;
+    }
+
 }
 
 
@@ -749,8 +775,7 @@ input:checked + .slider:before {
             "maddysmachines   emberfall"
             "spintegration    printer"
             "portfoliowebsite computerBuild"
-            "clickerGame      ."
-            "buildings        ."
+            "clickerGame      buildings"
             "manim            consord"
             "knowhow          knowhow"
             "python           python"
@@ -841,6 +866,10 @@ input:checked + .slider:before {
     }
 
     .modal { padding-top: 0; }
+        .mobile {
+        display: none;
+    }
+
 }
 
 
@@ -1080,4 +1109,8 @@ input:checked + .slider:before {
     input:checked + .slider:before { transform: translateX(21px); }
 
     .slider.round { border-radius: 27px; }
+    .mobile {
+        display: block;
+    }
+
 }

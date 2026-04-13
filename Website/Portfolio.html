@@ -51,7 +51,7 @@
         <div class="resume scrollDiv" id="resume" style="font-size: 1.9em;">RESUME</div>
         <div class="nameplate noHover scrollDiv" id="nameplate">HI, IM LUNA</div>
         <div class="aboutme noHover scrollDiv">
-            <p>My name is Luna Miles. and I am a junior at Meridian Technical Charter High School. Ive always loved computers and programming and my eagerness to learn and code relects that. I absolutely adore working with people and I want to share my expereince with you.</p>
+            <p>My name is Luna Miles, and I am a junior at Meridian Technical Charter High School. Ive always loved computers and programming and my eagerness to learn and code relects that. I absolutely adore working with people and I want to share my expereince with you.</p>
         </div>
         <div class="learnmore scrollDiv" id="learnmore">
             <h2>MORE ABOUT ME</h2>
@@ -104,7 +104,7 @@
         <div class="projects noHover scrollDiv" id="projects" >PROJECTS</div>
         <div class="maddysmachines project scrollDiv" id="maddysmachines">
             <p>MADDY'S MACHINES</p>
-            <img src="../Images/maddysmachines-01.png">
+            <img src="../Images/maddysmachines-01.png" style="height: auto;">
         </div>
 
         <div class="emberfall project scrollDiv" id="emberfall">
@@ -120,15 +120,15 @@
             
         <div class="spintegration project scrollDiv" id="spintegration">
             <p>SIMPLY SYNCED</p>
-            <img src="../Images/shortcuts.jpg">
+            <img src="../Images/shortcuts.jpg" style="height: auto;">
         </div>
         <div class="printer project scrollDiv" id="printer">
             <p>3D PRINTER REPAIR</p>
-            <img src="../Images/printer.png">
+            <img src="../Images/printer.png" style="height: 300px;">
         </div>
         <div class="portfoliowebsite project scrollDiv" id="portfoliowebsite">
             <p style="z-index: 3;">PORTFOLIO WEBSITE</p>
-            <img src="../Images/behind.png" style="z-index: 1;">
+            <img src="../Images/behind.png"  style="z-index: 1; height: 300px" >
 
             <div class="anglediv1"></div>
             <div class="anglediv2"></div>
@@ -136,7 +136,7 @@
         </div>
         <div class="computerBuild project scrollDiv" id="computerBuild">
             <p>COMPUTER BUILD</p>
-            <img src="../Images/Computer/PCondesk.jpg">
+            <img src="../Images/Computer/PCondesk.jpg" style="height: 300px;">
         </div>
         <div class="clickerGame project scrollDiv" id="clickerGame">
             <p>CLICKER GAME</p>
@@ -148,11 +148,19 @@
         </div>
         <div class="manim project scrollDiv" id="manim">
             <p>MANIM</p>
-            <img src="../Icons/Manim.png" alt="Manim project">
+            <img src="../Icons/Manim.png" style="height: auto;">
         </div>
         <div class="consord project scrollDiv" id="consord">
             <p>CONSORD</p>
+            <img src="../Images/consordreturn.png" style="height:auto">
         </div>
+    </div>
+
+    <div class="footer">
+            <a href="mailto:lunam.2027@mtchs.org">lunam.2027@mtchs.org</a>
+            <a href="https://github.com/lyrae-zip" target="_blank" rel="noopener noreferrer">My Github</a>
+            <a href="https://www.credly.com/users/luna_miles" target="_blank" rel="noopener noreferrer">My Credly</a>
+            <a href="../Luna-Resume.pdf" download="Luna-Resume.pdf">Download My resume</a>
     </div>
 
     <div class="modal" id="modal">
@@ -359,19 +367,18 @@
                 <div class="modalHeader">
                     <h2>RESUME</h2>
                     <div class="headerIcons">
-                        <a href="../Luna Resume.pdf" target="_blank" rel="noopener noreferrer" style="scale: calc(89%);"><button>Open PDF</button></a>
+                        <a href="../Luna-Resume.pdf" target="_blank" rel="noopener noreferrer" style="scale: calc(89%);"><button>Open PDF</button></a>
                     </div>
                 </div>
                 <hr>
-                <iframe src="../Luna Resume.pdf" width="100%" height="1500px"></iframe>
+                <iframe src="../Luna-Resume.pdf" width="100%" height="1400px"></iframe>
             </div>
             <div id="maddysmachinesModal">
                 <div class="modalHeader">
-                    <h2>MADDY'S MACHINES</h2>
+                    <h2 style="font-size: 2.5em;">MADDY'S MACHINES</h2>
                     <div class="headerIcons">
                         <img src="../Icons/ComputerCraft.png">
                         <img src="../Icons/Lua.png">
-                        <img src="../Icons/GoogleSheets.png">
                         <img src="../Icons/appsScript.png">
                     </div>
                 </div>
@@ -684,15 +691,16 @@
 
             <div id="cookies" style="display: flex; flex-direction: column; gap: 10px; align-items: center;">
                 <div class="modalHeader">
-                    <h2>COOKIES</h2>
+                    <h2>Information</h2>
                 </div>
+                <p class="mobile"> This Website is best viewed on Desktop.</p>
                 <p>This website uses cookies to save the chosen theme.</p>
-
+                
                 <div style="display: flex; align-items: center; gap: 10px;">
                     <p>Cookies</p>
                     <label class="switch">
-                    <input type="checkbox" id="checked">
-                    <span class="slider round"></span>
+                        <input type="checkbox" id="checked">
+                        <span class="slider round"></span>
                     </label>
                 </div>
                 <button onclick="proceed()"> Proceed</button>

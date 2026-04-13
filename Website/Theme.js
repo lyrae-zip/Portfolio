@@ -1,20 +1,20 @@
-var root = document.querySelector(":root");
+    var root = document.querySelector(":root");
 
 function load(){
 
     if (!document.cookie.includes("cookiesAccepted=true")) {
         showModalFor(document.getElementById("cookies"));
 
-        num = Math.random(document.getElementsByClassName("theme").length);
-        num = Math.floor(num * document.getElementsByClassName("theme").length);
+        num = Math.random(document.getElementsByClassName("theme").length - 1);
+        num = Math.floor(num * document.getElementsByClassName("theme").length - 1);
         setTheme({currentTarget: document.getElementsByClassName("theme")[num]});
     } else {
         let theme = document.cookie.split("; ").find(row => row.startsWith("theme="));
         if (theme) {
             setTheme({currentTarget: document.getElementById(theme.split("=")[1])});
         } else {
-            num = Math.random(document.getElementsByClassName("theme").length);
-            num = Math.floor(num * document.getElementsByClassName("theme").length);
+            num = Math.random(document.getElementsByClassName("theme").length - 1);
+            num = Math.floor(num * document.getElementsByClassName("theme").length - 1);
             setTheme({currentTarget: document.getElementsByClassName("theme")[num]});
         }
     }
