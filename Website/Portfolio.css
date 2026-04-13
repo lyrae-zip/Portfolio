@@ -4,7 +4,6 @@
     --backgroundColor: #000;
     --textColor: #000;
     --imageFade: #000;
-
 }
 
 
@@ -26,7 +25,8 @@ html, .grid{
       "certifications    resume         selfie        selfie"
       "projects         projects       projects      projects"
       "maddysmachines   emberfall      spintegration printer"
-      "portfoliowebsite computerBuild  clickerGame   ."
+      "portfoliowebsite computerBuild  clickerGame   buildings"
+      "manim            consord        .             ."
       "knowhow          knowhow        knowhow       knowhow"
       "python           python         java          java"
       "lua              lua            web           web"
@@ -58,6 +58,10 @@ html, .grid{
 .grid > .portfoliowebsite     { grid-area: portfoliowebsite; }
 .grid > .computerBuild        { grid-area: computerBuild; }
 .grid > .clickerGame          { grid-area: clickerGame; }
+.grid > .buildings            { grid-area: buildings; }
+.grid > .manim               { grid-area: manim; }
+.grid > .consord             { grid-area: consord; }
+
 
 body{
     background: var(--backgroundColor);
@@ -147,7 +151,7 @@ button:hover {
     font-size: 0.96em;
 }
 
-.header, .knowhow, .educationCerts, .projects {
+.header, .knowhow, .projects {
     background-color: var(--titleColor);
     font-family: 'Climate Crisis', cursive;
     font-weight: 200;
@@ -453,7 +457,7 @@ br {
 .theme {
     position: relative;
     padding: 10px;
-    font-size: 0.72em;
+    font-size: 0.em;
     border-radius: 10px;
     display: flex;
     flex-direction: row;
@@ -470,6 +474,7 @@ br {
     margin: 0;
     text-align: center;
     line-height: 20px;
+    font-size: 1.3em;
 }
 
 .themeSamples {
@@ -643,7 +648,8 @@ input:checked + .slider:before {
             "certifications   resume         selfie        selfie"
             "projects         projects       projects      projects"
             "maddysmachines   emberfall      spintegration printer"
-            "portfoliowebsite computerBuild  clickerGame   ."
+            "portfoliowebsite computerBuild  clickerGame   buildings"
+            "manim            consord        .             ."
             "knowhow          knowhow        knowhow       knowhow"
             "python           python         java          java"
             "lua              lua            web           web"
@@ -689,7 +695,8 @@ input:checked + .slider:before {
             "projects         projects       projects projects projects projects"
             "maddysmachines maddysmachines   emberfall emberfall      spintegration spintegration"
             "printer printer          portfoliowebsite portfoliowebsite computerBuild computerBuild"
-            "clickerGame clickerGame      . . .             ."
+            "clickerGame clickerGame      buildings buildings .             ."
+            "manim manim consord consord . ."
             "knowhow knowhow knowhow knowhow          knowhow        knowhow"
             "python python python          java java java          "
             "lua lua lua web web web              "
@@ -743,6 +750,8 @@ input:checked + .slider:before {
             "spintegration    printer"
             "portfoliowebsite computerBuild"
             "clickerGame      ."
+            "buildings        ."
+            "manim            consord"
             "knowhow          knowhow"
             "python           python"
             "java             java"
@@ -803,7 +812,7 @@ input:checked + .slider:before {
     .selfie { height: 600px; }
     .nameplate { font-size: 2.4em; }
 
-    .header, .knowhow, .educationCerts, .projects { font-size: 1.6em; }
+    .header, .knowhow, .certifications, .projects { font-size: 1.6em; }
 
     .behindthescenes, .anglediv1, .anglediv2 { display: none; }
 
@@ -849,7 +858,6 @@ input:checked + .slider:before {
             "learnmore"
             "certifications"
             "resume"
-            "educationCerts"
             "projects"
             "maddysmachines"
             "emberfall"
@@ -858,6 +866,9 @@ input:checked + .slider:before {
             "portfoliowebsite"
             "computerBuild"
             "clickerGame"
+            "buildings"
+            "manim"
+            "consord"
             "knowhow"
             "python"
             "java"
@@ -957,7 +968,7 @@ input:checked + .slider:before {
 
     .nameplate { font-size: 2em; }
 
-    .header, .knowhow, .educationCerts, .projects { font-size: 1.6em; }
+    .header, .knowhow, .certifications, .projects { font-size: 1.6em; }
 
     button {
         padding: 8px 16px;

@@ -10,6 +10,10 @@ var printer = document.getElementById("printer");
 var portfoliowebsite = document.getElementById("portfoliowebsite");
 var learnmore = document.getElementById("learnmore");
 var computerBuild = document.getElementById("computerBuild");
+var buildings = document.getElementById("buildings");
+var manim = document.getElementById("manim");
+var consord = document.getElementById("consord");
+var clickerGame = document.getElementById("clickerGame");
 
 var themepicker = document.getElementById("themepicker");
 var themepickerModal = document.getElementById("themepickerModal");
@@ -23,6 +27,9 @@ var portfoliowebsiteModal = document.getElementById("portfoliowebsiteModal");
 var learnmoreModal = document.getElementById("learnmoreModal");
 var cookies = document.getElementById("cookies");
 var computerBuildModal = document.getElementById("computerBuildModal");
+var buildingsModal = document.getElementById("buildingsModal");
+var manimModal = document.getElementById("manimModal");
+var consordModal = document.getElementById("consordModal");
 var clickerGameModal = document.getElementById("clickerGameModal");
 
 
@@ -55,6 +62,9 @@ function showModalFor(element) {
     learnmoreModal.style.display = "none";
     themepickerModal.style.display = "none";
     computerBuildModal.style.display = "none";
+    buildingsModal.style.display = "none";
+    manimModal.style.display = "none";
+    consordModal.style.display = "none";
     clickerGameModal.style.display = "none";
     cookies.style.display = "none";
 
@@ -86,6 +96,15 @@ function showModalFor(element) {
         case "computerBuild":
             computerBuildModal.style.display = "block";
             break;
+        case "buildings":
+            buildingsModal.style.display = "block";
+            break;
+        case "manim":
+            manimModal.style.display = "block";
+            break;
+        case "consord":
+            consordModal.style.display = "block";
+            break;
         case "clickerGame":
             clickerGameModal.style.display = "block";
             break;
@@ -106,6 +125,9 @@ portfoliowebsite.onclick = function() { showModalFor(this); };
 learnmore.onclick = function() { showModalFor(this); };
 themepicker.onclick = function() { showModalFor(this); };
 computerBuild.onclick = function() { showModalFor(this); };
+buildings.onclick = function() { showModalFor(this); };
+manim.onclick = function() { showModalFor(this); };
+consord.onclick = function() { showModalFor(this); };
 clickerGame.onclick = function() { showModalFor(this); };
 
 span.onclick = hideModal;
